@@ -1,0 +1,11 @@
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
+}
+
+.wrapper__image {
+    background: url("./assets/img/bg.jpg") top center no-repeat;
+    height: 900px;
+}

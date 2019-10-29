@@ -1,0 +1,13 @@
+include ../link/link
+
+mixin site-menu(siteMenu)
+    ul.site-menu
+        each item, i in siteMenu
+            if siteMenu[i].popup
+               li.site-menu__item.site-menu__item_popup
+                 +link(link)
+                  =siteMenu[i].name
+            else
+                li.site-menu__item
+                    +link(link)
+                     =siteMenu[i].name

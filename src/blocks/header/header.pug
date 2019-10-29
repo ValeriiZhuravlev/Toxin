@@ -1,20 +1,31 @@
+include ../site-menu/site-menu
 
-header.page-header
-    nav.navigation
-        .logo
-            img(src=require('./img/Logo.svg') width="106" height="40")
-        ul.site-navigation
-            li.site-navigation__item
-                a.site-navigation__link(href="#") О нас
-            li.site-navigation__item_arrow
-                a.site-navigation__link(href="#") Услуги
-            li.site-navigation__item
-                a.site-navigation__link(href="#") Вакансии
-            li.site-navigation__item
-                a.site-navigation__link(href="#") Новости
-            li.site-navigation__item_arrow
-                a.site-navigation__link(href="#") Соглашения
-        ul.user-navigation
-            li.user-navigation__item
+
+mixin header(siteMenu)
+  header.header  
+    -
+      siteMenu = siteMenu || 
+      [
+        {name: 'О нас'},
+        {name: 'Услуги', popup: true},
+        {name: 'Вакансии'},
+        {name: 'Новости'},
+        {name: 'Соглашения', popup: true}
+      ];
+
+    +site-menu(siteMenu)
+
+
+
+      
+
+        
+
+            
+            
+             
+    
+    
+    
                 
                

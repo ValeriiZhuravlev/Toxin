@@ -1,5 +1,17 @@
-.page-header {
+@import '../site-menu/site-menu.scss';
+@import './user-menu/user-menu.scss';
+
+.header {
     position: absolute;
+    max-width: 1440px;
+    min-width: $min-width;
     background-color: #fff;
     width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 8px 140px 15px 205px;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+   
 }

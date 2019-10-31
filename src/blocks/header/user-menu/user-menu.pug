@@ -1,0 +1,11 @@
+include ../../button/button
+
+mixin user-menu(user, userMenu)
+    - userMenu = userMenu || []
+    ul.header__user-menu(class=user ? 'header__user-name' : 'header__button')
+        if user
+            =user
+        else
+            each item in userMenu
+                li.header__user-item
+                    +button(item.text, item.type, item.size)

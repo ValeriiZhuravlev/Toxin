@@ -4,10 +4,6 @@
 @import "assets/fonts/montserrat";
 
 html {
-      font-family: $mainFont;
-      font-size: $mainFontSize;
-      color: $mainFontColor;
-
       @media screen and (max-width: $desktopWidth) {
             font-size: 16px;
       }
@@ -23,4 +19,5 @@ html {
 
 @import "./blocks/body/body.scss";
 @import "./blocks/landing/landing.scss";
+@import "./blocks/header/header.scss";
 

@@ -1,0 +1,14 @@
+.header__button{
+    padding-top: 2px;
+    .header__user-item {
+         margin-right:  20px;
+    }
+}
+
+@media screen and (max-width: $tableWidth) {
+    .header__button {
+        .header__user-item:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}

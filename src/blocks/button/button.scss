@@ -1,0 +1,19 @@
+.btn {
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px 21px 13px 19px;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .btn {
+        font-size: 10px;
+        padding: 8px 15px;
+    }
+}
+
+@import './button-type_fill/button-type_fill.scss';
+@import './button-type_border/button-type_border.scss';

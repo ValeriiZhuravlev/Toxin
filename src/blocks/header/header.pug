@@ -5,7 +5,7 @@ include ../logo/logo
 
 mixin header(siteMenu, userMenu)
   header.header
-    +logo()
+    +logo()(class="header__logo")
     -
       siteMenu = siteMenu || 
       [
@@ -13,14 +13,15 @@ mixin header(siteMenu, userMenu)
         {name: 'Услуги',extend: true},
         {name: 'Вакансии'},
         {name: 'Новости'},
-        {name: 'Соглашения', extend: true}
+        {name: 'Соглашения',extend: true}
       ];
       userMenu = userMenu || [
-        {text: 'Войти', type:'border'},
-        {text: 'Зарегистрироваться', type:'fill'}
+        {text: 'войти', type:'border'},
+        {text: 'зарегистрироваться', type:'fill'}
       ]
 
-    +site-menu(siteMenu)
+    
+    +site-menu(siteMenu)(class='header__site-menu')
     +user-menu(user, userMenu)
 
 

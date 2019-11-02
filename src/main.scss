@@ -3,19 +3,7 @@
 @import "assets/style_utils/normalize";
 @import "assets/fonts/montserrat";
 
-html {
-      @media screen and (max-width: $desktopWidth) {
-            font-size: 16px;
-      }
 
-      @media screen and (max-width: $tableWidth) {
-            font-size: 15px;
-      }
-
-      @media screen and (max-width: $phoneWidth) {
-            font-size: 14px;
-      }
-}
 
 @import "./blocks/body/body.scss";
 @import "./blocks/landing/landing.scss";

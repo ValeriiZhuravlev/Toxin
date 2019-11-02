@@ -1,4 +1,6 @@
 @import '../link/link.scss';
+@import './site-menu__item/site-menu__item.scss';
+@import './site-menu__item_extend/site-menu__item_extend.scss';
 
 .site-menu {
     margin: 0;
@@ -6,9 +8,10 @@
     list-style: none;
     display: flex;
     box-sizing: border-box;
+}
 
-    .site-menu__item {
-        margin-right: 20px;
-        padding-top: 14px;
-    }
+@media screen and (max-width: $smDesktopWidth) {
+    .site-menu {
+        order: 3;
+    }    
 }

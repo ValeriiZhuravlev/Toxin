@@ -1,17 +1,32 @@
 @import '../site-menu/site-menu.scss';
 @import './user-menu/user-menu.scss';
+@import '../button/button.scss';
+@import './header__site-menu/header__site-menu.scss';
+@import './header__button/header__button.scss';
+@import './header__logo/header__logo.scss';
 
 .header {
     position: absolute;
-    max-width: 1440px;
+    max-width: $max-width;
     min-width: $min-width;
     background-color: #fff;
     width: 100%;
     display: flex;
-    margin: 0;
-    padding: 8px 140px 15px 205px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 11px 32px 13px 50px;
     box-sizing: border-box;
     justify-content: space-between;
+}
 
-   
+@media screen and (max-width: $tableWidth) {
+    .header {
+        justify-content: center; 
+    }
+}
+
+@media screen and (max-width: $phoneWidth) {
+    .header {
+        flex-wrap: nowrap; 
+    }
 }

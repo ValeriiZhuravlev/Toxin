@@ -79,7 +79,7 @@ module.exports = {
         name: 'assets/fonts/[name].[ext]'
       }
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(gif|jpg|png|svg)$/,
       loader: 'file-loader',
       options: {
         name: 'assets/img/[name].[ext]'

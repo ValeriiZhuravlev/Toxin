@@ -1,0 +1,16 @@
+.site-menu__item_extend {
+    padding-right: 24px;
+    position: relative;
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: -2px;
+        width: 24px;
+        height: 21px;
+        background: url("./assets/img/expand_more.png") no-repeat center; 
+        cursor: pointer;
+    }
+    
+}

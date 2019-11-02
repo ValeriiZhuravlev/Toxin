@@ -8,3 +8,17 @@
     margin-right: auto;
     font-size: $mainFontSize;
 }
+
+.body {
+    @media screen and (max-width: $desktopWidth) {
+          font-size: 14px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+          font-size: 13px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+          font-size: 12px;
+    }
+}

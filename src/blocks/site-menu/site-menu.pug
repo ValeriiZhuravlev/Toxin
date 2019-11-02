@@ -1,9 +1,10 @@
 include ../link/link
 
+
 mixin site-menu(siteMenu)
-    ul.site-menu
+    ul.site-menu&attributes(attributes)
         each item in siteMenu
-            if siteMenu.extend
+            if item.extend
                li.site-menu__item.site-menu__item_extend
                  +link(link)(class='site-menu__link')
                   =item.name

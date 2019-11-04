@@ -2,4 +2,9 @@
     background: $purpleLinearGradient;
     color: #fff;
     border: none;
+    
+
+    &:active{
+        opacity: .5;
+    }
 }

@@ -1,0 +1,12 @@
+mixin input(label, size, placeholder, dropdown=false)
+    if(dropdown)
+        .field(class=`field_dropdown`)
+            label.field__label(for="arrival")= label
+            input.field__input(id="arrival", placeholder=placeholder)&attributes(attributes)
+    else
+        .field(class=``)                                                                                  "                                                                     dropdown ? class="field_dropdown" : class="")
+            label(for="arrival")= label
+            input.field__input(id="arrival", placeholder=placeholder)
+
+    
+    

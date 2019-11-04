@@ -2,16 +2,16 @@ include ../../blocks/body/body
 include ../../blocks/landing/landing
 include ../../blocks/header/header
 
+
 doctype html
 html(lang='ru')
   head
     meta(charset='utf-8')
     title Toxin
   +body()
-    +header()
     +landing()
-    
-    
+      +header()
+      +card('search')(class="landing__card-search")   
 
 
     

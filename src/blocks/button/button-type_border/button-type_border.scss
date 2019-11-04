@@ -20,5 +20,9 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    &:active{
+        background: $purpleLinearGradient50;
+    }
 } 
     

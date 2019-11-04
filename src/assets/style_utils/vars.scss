@@ -19,10 +19,12 @@ $smPhoneWidth            : 320px;
 $darkShade100            :$mainFontColor ;
 $darkShade75             :change-color($mainFontColor, $alpha: 0.75);
 $darkShade50             :change-color($mainFontColor, $alpha: 0.5);
-$darkShade30             :change-color($mainFontColor, $alpha: 0.3);
-$darkShade10             :change-color($mainFontColor, $alpha: 0.75);
+$darkShade25             :change-color($mainFontColor, $alpha: 0.25);
+$darkShade10             :change-color($mainFontColor, $alpha: 0.10);
 $darkShade5              :change-color($mainFontColor, $alpha: 0.05);
 $purple                  :#bc9cff;
 $green                   :#6fcf97;
 
 $purpleLinearGradient    :linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$purpleLinearGradient50  :linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%,
+rgba(139, 164, 249, 0.5) 100%);

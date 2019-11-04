@@ -1,3 +1,7 @@
+@import './button-type_fill/button-type_fill.scss';
+@import './button-type_border/button-type_border.scss';
+@import './button_extend/button_extend.scss';
+
 .btn {
     font-weight: 800;
     font-size: 12px;
@@ -6,6 +10,7 @@
     border: none;
     border-radius: 30px;
     box-sizing: border-box;
+    outline: none;
 }
 
 @media screen and (max-width: $tableWidth) {
@@ -15,5 +20,3 @@
     }
 }
 
-@import './button-type_fill/button-type_fill.scss';
-@import './button-type_border/button-type_border.scss';

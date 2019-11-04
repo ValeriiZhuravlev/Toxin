@@ -1,0 +1,13 @@
+include ../../input/input
+include ../../button/button
+
+mixin card-search()
+        form.card-search__form
+            h1.card__title Найдём номера под ваши пожелания
+            .card-search__field-wrapper    
+                +input('прибытие','half','ДД.ММ.ГГГГ',true)
+                +input('выезд','half','ДД.ММ.ГГГГ',true)
+            +input('гости','full','',true)(value="Сколько гостей")
+            +button('asd', type='fill',true)
+
+                //- Найдём номера под ваши положения

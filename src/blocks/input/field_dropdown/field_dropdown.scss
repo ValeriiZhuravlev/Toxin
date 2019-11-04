@@ -1,0 +1,14 @@
+.field_dropdown {
+    position: relative;
+
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            background: url("./assets/img/expand_more.png") no-repeat center;
+            width: 24px;
+            height: 20px;
+            top: 50%;
+            right: 10px;
+        }   
+}

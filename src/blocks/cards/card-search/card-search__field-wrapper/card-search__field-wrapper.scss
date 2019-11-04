@@ -1,0 +1,11 @@
+.card-search__field-wrapper {
+    display: flex;
+   .field {
+    display: inline-block;
+    max-width: 150px;
+
+    &:first-child{
+        margin-right: 20px;
+    }
+   }
+}

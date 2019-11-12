@@ -8,4 +8,8 @@
     padding-right: 30px;
     margin-top: 5px;
     color: $darkShade75;
+
+    &:disabled {
+        background-color: #fff;
+    }
 }

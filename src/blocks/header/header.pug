@@ -3,11 +3,11 @@ include ../site-menu/site-menu
 include user-menu/user-menu
 include ../logo/logo
 
-mixin header(siteMenu, userMenu)
+mixin header(opt)
   header.header
     +logo()(class="header__logo")
     -
-      siteMenu = siteMenu || 
+      siteMenu = opt.siteMenu || 
       [
         {name: 'О нас'},
         {name: 'Услуги',extend: true},
@@ -15,7 +15,7 @@ mixin header(siteMenu, userMenu)
         {name: 'Новости'},
         {name: 'Соглашения',extend: true}
       ];
-      userMenu = userMenu || [
+      userMenu = opt.userMenu || [
         {text: 'войти', type:'border'},
         {text: 'зарегистрироваться', type:'fill'}
       ]

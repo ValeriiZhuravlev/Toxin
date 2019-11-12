@@ -1,0 +1,10 @@
+.calendar__nav-icon {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background: url('./assets/img/arrow.png') no-repeat center;
+
+    &-back {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,19 @@
+@import "./calendar__nav-icon/calendar__nav-icon.scss";
+@import "./datepicker--nav/datepicker--nav.scss";
+@import "./datepicker--content/datepicker--content.scss";
+@import "./datepicker--buttons/datepicker--buttons.scss";
+
+
+.datepicker-inline {
+    position: absolute;
+    top: 90px;
+    z-index: 3;
+}
+
+.calendar {
+    position: relative;
+}
+
+.datepicker {
+    width: 100%;
+}

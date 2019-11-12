@@ -1,0 +1,19 @@
+include ../input/input
+
+mixin dropdown(opt)
+    -optInput = opt.optInput || {};
+    -optDrop = opt.optDrop || {};
+    +input(optInput[0])
+    .dropdown
+        ul.dropdown__list
+            each item in optDrop
+                li.dropdown__item
+                    span.dropdown__text= item.name
+                    .controler.dropdown__controler
+                        button.controler__button.controler__button_minus
+                        input.controler__number
+                        button.controler__button.controler__button_plus
+                        .dropdown__buttons
+                            button.dropdown__button.dropdown__button_clear Очистить
+                            button.dropdown__button.dropdown__button_apply Применить
+                            

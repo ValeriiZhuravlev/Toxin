@@ -1,0 +1,67 @@
+%range {
+    content: '';
+    position: absolute; 
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    background: $purpleLinearGradient25;
+    z-index: -1;
+}
+.datepicker--content {
+    padding: 18px 20px;
+    .datepicker--day-name {
+        text-transform: capitalize;
+        font-family: $mainFont;
+        font-weight: 800;
+        font-size: 12px;
+        color: $purple;
+    }
+    .datepicker--cells{
+        margin-top: 12px;
+        .datepicker--cell-day {
+            font-weight: 400;
+            font-family: $darkShade100;
+            color:$darkShade50;
+            font-size: 12px;
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            &:hover {
+                background: $purpleLinearGradient50;
+                font-weight: 800;
+                color: #fff;
+            }
+            &.-other-month- {
+                color:$darkShade25;
+            }
+            &.-in-range- {
+                background: transparent;
+                &:before { 
+                    @extend %range;
+                }
+            }  
+            &.-range-from-::before {
+                @extend %range;
+                border-radius: 50% 0 0 50%;
+            }
+            &.-range-to-::before {
+                    @extend %range;
+                    border-radius: 0 50% 50% 0;
+                
+            }
+            &.-current- {  
+                background:$greenLinearGradient;
+                font-weight: 800;
+                color: #fff;
+            }
+            &.-selected- {
+                background: $purpleLinearGradient;
+                font-weight: 800;
+                color: #fff;
+            }
+        }
+    }
+    
+}
+

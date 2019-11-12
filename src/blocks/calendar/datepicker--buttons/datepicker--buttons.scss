@@ -1,0 +1,19 @@
+.datepicker--buttons {
+    border: none;
+    justify-content: space-between;
+    padding: 2px 20px 20px;
+    .datepicker--button {
+        display: inline-block;
+        flex: 0 1 auto;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 12px;
+        font-family: $mainFont;
+        color: $darkShade50;
+        height: 100%;
+    }
+    .datepicker--button-apply {
+        color: $purple;
+    }
+}
+

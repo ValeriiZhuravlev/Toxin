@@ -1,13 +1,35 @@
 include ../../input/input
 include ../../button/button
+include ../../dropdown/dropdown
 
 mixin card-search()
         form.card-search__form
             h1.card__title Найдём номера под ваши пожелания
-            .card-search__field-wrapper    
-                +input('прибытие','half','ДД.ММ.ГГГГ',true)
-                +input('выезд','half','ДД.ММ.ГГГГ',true)
-            +input('гости','full','',true)(value="Сколько гостей")
-            +button('asd', type='fill',true)
-
-                //- Найдём номера под ваши положения
+            .card-search__field-wrapper.calendar
+                +input({
+                    label:'прибытие',
+                    id:'arrival',
+                    placeholder: 'ДД.ММ.ГГГГ',
+                    dropdown: true
+                })(class='calendar__input')
+                +input({
+                    label:'выезд',
+                    id:'checkOut',
+                    placeholder: 'ДД.ММ.ГГГГ',
+                    dropdown: true
+                })(class='calendar__input')
+            +dropdown({
+                optInput: [{
+                    label:'гости',
+                    id:'full',
+                    dropdown: true,
+                    value: 'Сколько гостей'
+                }], 
+                optDrop: [
+                    {name: 'Взрослые'},
+                    {name: 'Дети'},
+                    {name: 'Младенцы'}
+                ] 
+                 
+            })(class='dropdown__total')
+            +button('подобрать номер', type='fill',true)

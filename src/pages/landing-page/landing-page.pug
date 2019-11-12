@@ -8,10 +8,14 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     title Toxin
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css")
   +body()
     +landing()
-      +header()
-      +card('search')(class="landing__card-search")   
+      +header({})
+      +card('search')(class="landing__card-search")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js") 
+
 
 
     

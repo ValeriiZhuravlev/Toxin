@@ -3,6 +3,8 @@
 
         &:after{
             content: '';
+            cursor: pointer;
+            pointer-events: none;
             display: block;
             position: absolute;
             background: url("./assets/img/expand_more.png") no-repeat center;

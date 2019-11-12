@@ -1,0 +1,16 @@
+.btn_extend {
+    &.btn{
+        margin-top: 31px;
+        height: 44px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 20px;
+            background: url('./assets/img/arrow_forwar.png') no-repeat center;
+            top: 12px;
+            right: 10px;
+        }
+    }
+}

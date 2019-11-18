@@ -1,6 +1,9 @@
 @import '../link/link.scss';
 @import './site-menu__item/site-menu__item.scss';
 @import './site-menu__item_extend/site-menu__item_extend.scss';
+@import './site-menu__header/site-menu__header.scss';
+@import './site-menu__row-list/site-menu__row-list.scss';
+@import './site-menu__row-item/site-menu__row-item.scss';
 
 .site-menu {
     margin: 0;
@@ -10,8 +13,3 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: $smDesktopWidth) {
-    .site-menu {
-        order: 3;
-    }    
-}

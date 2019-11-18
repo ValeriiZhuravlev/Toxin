@@ -1,0 +1,11 @@
+include ../input/input
+
+mixin subscribe()
+    .subscribe&attributes(attributes)
+        h3.subscribe__header Подписка
+        p.subscribe__text Получайте специальные предложения и новости сервиса
+        +input({
+           placeholder: 'Email',
+           type: 'email',
+           expandable: true
+        })

@@ -1,0 +1,11 @@
+@import "./about__text/about__text.scss";
+
+.about {
+    max-width: 255px;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .about {
+        max-width: 400px;
+    }
+}

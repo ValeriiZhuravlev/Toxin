@@ -1,0 +1,9 @@
+.footer__subscribe {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .footer__subscribe {
+        display: none;
+    }
+}

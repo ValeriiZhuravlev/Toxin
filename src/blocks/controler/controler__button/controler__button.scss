@@ -1,0 +1,20 @@
+@import './controler__button_minus/conrtoler__button_minus.scss';
+@import './controler__button_plus/controler__button_plus.scss';
+
+.controler__button {
+    border: 1px solid $darkShade50;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $darkShade50;
+    outline: none;
+    cursor: pointer;
+
+    &:disabled {
+        border-color: $darkShade25;
+        color: $darkShade25;
+    }
+}

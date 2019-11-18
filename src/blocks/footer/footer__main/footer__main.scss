@@ -1,0 +1,16 @@
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 85px 4vw 80px 4vw;
+
+}
+
+@media screen and (max-width: $tableWidth) {
+    .footer__main {
+        justify-content: center;
+        text-align: center;
+    }
+}

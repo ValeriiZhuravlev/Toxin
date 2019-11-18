@@ -1,13 +1,15 @@
 mixin input(opt)
     -let dropdown = opt.dropdown || null;
+    -let expandable = opt.expandable || null;
     if dropdown 
-       .field.field_dropdown
+       .field.field_dropdown&attributes(attributes)
             label.field__label(for=opt.id)= opt.label
-            input.field__input(value=opt.value, id=opt.id, placeholder=opt.placeholder,autocomplete="off" readonly)&attributes(attributes)
-    else
-       .field                                                 
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder,autocomplete="off" readonly)
+    else if expandable                                                                                  
+       .field.field_expandable&attributes(attributes)
             label.field__label(for=opt.id)= opt.label
-            input.field__input(value=opt.value, id=opt.id, placeholder=opt.placeholder, autocomplete="off" readonly )&attributes(attributes)
-                                                                                        
-    
-    
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, autocomplete="off")
+    else 
+       .field&attributes(attributes)                                            
+            label.field__label(for=opt.id)= opt.label
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, autocomplete="off")

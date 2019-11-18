@@ -8,8 +8,12 @@
     padding-right: 30px;
     margin-top: 5px;
     color: $darkShade75;
+    outline: none;
 
     &:disabled {
         background-color: #fff;
+    }
+    &:focus {
+        border-color: $darkShade50;
     }
 }

@@ -1,0 +1,8 @@
+include ./footer__main/footer__main
+include ./footer__copyright/footer__copyright
+
+mixin footer(opt)
+    -opt = opt|| {};
+    footer.footer
+        +footer__main(opt)
+        +footer__copyright(nets)

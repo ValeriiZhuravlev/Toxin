@@ -8,7 +8,14 @@ mixin site-menu(siteMenu)
                li.site-menu__item.site-menu__item_extend
                  +link(link)(class='site-menu__link')
                   =item.name
-            else
+            else if !(item.children)
                 li.site-menu__item
                     +link(link)(class='site-menu__link')
                      =item.name
+            if item.children
+                li.site-menu__item.site-menu__header= item.name
+                    ul.site-menu__row-list
+                        each childItem in item.children
+                            li.site-menu__row-item
+                                +link(link)(class='site-menu__link')
+                                    =childItem.name

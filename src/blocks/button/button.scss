@@ -1,5 +1,6 @@
 @import './button-type_fill/button-type_fill.scss';
 @import './button-type_border/button-type_border.scss';
+@import './button-type_inline/button-type_inline.scss';
 @import './button_extend/button_extend.scss';
 
 .btn {
@@ -7,8 +8,6 @@
     font-size: 12px;
     text-transform: uppercase;
     padding: 10px 21px 13px 19px;
-    padding-top: 10px;
-    padding-bottom: 13px;
     width: 100%;
     height: 34px;
     border: none;

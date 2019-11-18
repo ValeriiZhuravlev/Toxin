@@ -1,0 +1,17 @@
+.footer__site-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+    padding-right:55px;
+    padding-left: 42px;
+
+    .site-menu__header:nth-child(2) {
+        margin-right: 32px;
+    }
+}
+
+@media screen and (max-width: $tableWidth) {
+    .footer__site-menu {
+        display: none; 
+    }
+}

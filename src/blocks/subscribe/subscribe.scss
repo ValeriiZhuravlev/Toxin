@@ -1,0 +1,13 @@
+@import "./subscribe__header/subscribe__header.scss";
+@import "./subscribe__text/subscribe__text.scss";
+
+.subscribe {
+    padding-top: 4px;
+    max-width: 260px;
+
+    .field__input {
+        &::placeholder {
+            color: $darkShade25;
+        }
+    }
+}

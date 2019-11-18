@@ -1,0 +1,19 @@
+.landing__message {
+    width: 300px;
+    margin-top: 36vh;
+    margin-right: 45px;
+    padding-bottom: 20px;
+    color: $darkShade75;
+    line-height: 1.72;
+    text-align: right;
+    float: right;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .landing__message{
+        text-align: center;
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

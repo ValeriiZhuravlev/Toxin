@@ -10,26 +10,39 @@ mixin card-search()
                     label:'прибытие',
                     id:'arrival',
                     placeholder: 'ДД.ММ.ГГГГ',
-                    dropdown: true
-                })(class='calendar__input')
+                    dropdown: true,
+                    class: 'calendar__input'
+                })(class='card-search__input')
                 +input({
                     label:'выезд',
                     id:'checkOut',
                     placeholder: 'ДД.ММ.ГГГГ',
-                    dropdown: true
-                })(class='calendar__input')
+                    dropdown: true,
+                    class: 'calendar__input'
+                })(class='card-search__input')
             +dropdown({
                 optInput: [{
                     label:'гости',
                     id:'full',
                     dropdown: true,
-                    value: 'Сколько гостей'
+                    placeholder: 'Сколько гостей',
+                    class: 'dropdown__input'
                 }], 
                 optDrop: [
-                    {name: 'Взрослые'},
-                    {name: 'Дети'},
-                    {name: 'Младенцы'}
-                ] 
+                    {name: 'Взрослые', word: 'guests'},
+                    {name: 'Дети', word: 'guests'},
+                    {name: 'Младенцы', word: 'baby'}
+                ],
+                optButton: [
+                    {
+                        text: 'Применить',
+                        type: 'inline-purple',
+                        role: 'apply'
+                    },{
+                        text: 'Очистить',
+                        type: 'inline-grey',
+                        role: 'clear'
+                    }] 
                  
-            })(class='dropdown__total')
+            })(class='card-search__input')
             +button('подобрать номер', type='fill',true)

@@ -1,0 +1,32 @@
+include ../../site-menu/site-menu
+include ../../about/about
+include ../../subscribe/subscribe
+
+mixin footer__main(opt)
+    -
+     menuItem = opt.menuItem || [
+        {name: 'Навигация',
+         children: [
+             {name: 'О нас'},
+             {name: 'Новости'},
+             {name: 'Служба поддержки'},
+             {name: 'Услуги'}
+         ]},
+         {name: 'О нас',
+         children: [
+             {name: 'О сервисе'},
+             {name: 'Наша команда'},
+             {name: 'Вакансии'},
+             {name: 'Инвесторы'}
+         ]},
+         {name: 'Служба поддержки',
+         children: [
+             {name: 'Соглашения'},
+             {name: 'Сообщества'},
+             {name: 'Связь с нами'}
+         ]}
+        ];
+    .footer__main
+        +about()(class='footer__about')
+        +site-menu(menuItem)(class='footer__site-menu')
+        +subscribe()(class='footer__subscribe')

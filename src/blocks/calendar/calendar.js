@@ -1,11 +1,9 @@
 const calendar = function() {
   $( function() {
-
     let applyButton = $(
       '<span class="datepicker--button datepicker--button-apply">Применить</span>'
     );
     let datePicker = $('.calendar__input').focus((e) => {
-      let flag = true;
       let event = e.target;
       function splitArray(dateForm){
         let dateVal = dateForm.split(',');
@@ -16,6 +14,7 @@ const calendar = function() {
         $('.calendar').datepicker({
           range: true,
           inline:true,
+          classes: 'droplist',
           moveToOtherMonthsOnSelect: false,
           moveToOtherYearsOnSelect: false,
           toggleSelected: true,
@@ -32,9 +31,10 @@ const calendar = function() {
             splitArray(formattedDate);
           }
         });
+        
         $(document).mousedown((e) => {
           let event = e.target;
-          let calendarModal = $('.datepicker-inline');
+          let calendarModal = $('.droplist');
           if(!calendarModal.is(event) &&
               calendarModal.has(event).length === 0 &&
               !event.classList.contains('calendar__input')) {

@@ -8,3 +8,9 @@
         padding-top: 14px;
     }
 }
+
+@media screen and (max-width: $smDesktopWidth) {
+    .header__site-menu {
+        order: 3;
+    }    
+}

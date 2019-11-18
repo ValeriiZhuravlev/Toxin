@@ -1,0 +1,20 @@
+@import './dropdown__list/dropdown__list.scss';
+@import './dropdown__item/dropdown__item.scss';
+@import '../controler/controler.scss';
+@import './dropdown__text/dropdown__text.scss';
+@import './dropdown__buttons/dropdown__buttons.scss';
+
+.dropdown {
+    position: relative;
+    .dropdown__total {
+        display: none;
+        border: 1px solid $darkShade50;
+        top: calc(100% - 4px);
+        border-radius: 0 0 4px 4px;
+        width: 100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 3;
+    }
+}

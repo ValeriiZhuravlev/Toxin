@@ -2,7 +2,7 @@
 mixin button(text, type='fill', extend=false)
     if extend
         button(class=`btn btn_type-${type} btn_extend`)
-            span= text
+            span.btn__text= text
     else
         button(class=`btn btn_type-${type}`)
-            span= text
+            span.btn__text= text

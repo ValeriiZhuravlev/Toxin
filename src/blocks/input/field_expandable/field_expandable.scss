@@ -1,0 +1,13 @@
+.field_expandable {
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        background: url('./assets/img/arrow.png') no-repeat center;
+    }
+}

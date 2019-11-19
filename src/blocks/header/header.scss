@@ -14,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    padding: 11px 32px 13px 50px;
+    padding: 11px 42px 13px 50px;
     box-sizing: border-box;
     justify-content: space-between;
 }
@@ -27,6 +27,7 @@
 
 @media screen and (max-width: $phoneWidth) {
     .header {
-        flex-wrap: nowrap; 
+        padding: 10px;
+        justify-content: flex-start; 
     }
 }

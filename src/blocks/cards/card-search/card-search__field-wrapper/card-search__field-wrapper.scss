@@ -1,8 +1,10 @@
 .card-search__field-wrapper {
-    display: flex;
+    display: inline-block;
+    font-size: 0;
    .field {
     display: inline-block;
-    max-width: 150px;
+    width: calc(50% - 10px);
+    font-size: 14px;
 
     &:first-child{
         margin-right: 20px;

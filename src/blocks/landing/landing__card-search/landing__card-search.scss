@@ -2,3 +2,10 @@
     margin-top: 68px;
     margin-left: 4%;
 }
+
+@media screen and (max-width: $tableWidth) {
+    .landing__card-search {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

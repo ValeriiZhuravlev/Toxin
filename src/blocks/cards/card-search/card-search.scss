@@ -1,11 +1,16 @@
-@import 'card-search__field-wrapper/card-search__field-wrapper.scss';
-@import 'card-search__form/card-search__form.scss';
+@import './card-search__field-wrapper/card-search__field-wrapper.scss';
+@import './card-search__form/card-search__form.scss';
 @import '../../calendar/calendar.scss';
-@import 'card-search__input/card-search__input.scss';
+@import './card-search__input/card-search__input.scss';
 
-@media screen and (max-width: $tableWidth) {
-    .card {
-        margin-right: auto;
-        margin-left: auto;
+.card-search {
+    max-width: 380px;
+    padding: 40px 30px 30px;
+}
+
+@media screen and (max-width: $phoneWidth) {
+    .card-search {
+        max-width: 300px;
+        padding: 30px 20px;
     }
 }

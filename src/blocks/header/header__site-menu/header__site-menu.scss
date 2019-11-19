@@ -14,3 +14,10 @@
         order: 3;
     }    
 }
+
+@media screen and (max-width: $phoneWidth) {
+    .header__site-menu {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

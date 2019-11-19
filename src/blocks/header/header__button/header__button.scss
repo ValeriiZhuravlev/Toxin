@@ -1,6 +1,6 @@
 .header__button{
     padding-top: 2px;
-    .header__user-item {
+    .header__user-item:not(:last-child) {
          margin-right:  20px;
     }
 }

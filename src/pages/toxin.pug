@@ -1,0 +1,23 @@
+include ../blocks/body/body
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/filter/filter
+include ../blocks/main/main
+include ../blocks/landing/landing
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1' name='viewport')
+    block title
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css")
+  +body()
+    block content
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js") 
+
+
+

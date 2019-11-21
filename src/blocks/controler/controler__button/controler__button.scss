@@ -2,10 +2,10 @@
 @import './controler__button_plus/controler__button_plus.scss';
 
 .controler__button {
+    position: relative;
     border: 1px solid $darkShade50;
     background-color: transparent;
     border-radius: 50%;
-    text-align: center;
     width: 30px;
     height: 30px;
     font-size: 16px;
@@ -13,6 +13,13 @@
     color: $darkShade50;
     outline: none;
     cursor: pointer;
+
+    span {
+        position: relative;
+        top: 50%;
+        pointer-events: none;
+
+    }
 
     &:disabled {
         border-color: $darkShade25;

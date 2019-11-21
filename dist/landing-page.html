@@ -2,73 +2,74 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Toxin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
-  <link href="/assets/css/app.50253ba0edeadec1cad6.css" rel="stylesheet"></head>
+  <link href="/assets/css/app.e2e0599c01f03552af48.css" rel="stylesheet"></head>
   <body class="body">
+    <header class="header header_landing">
+      <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
+      <ul class="site-menu header__site-menu">
+        <li class="site-menu__item"><a class="site-menu__link" href="#">О нас</a>
+        </li>
+        <li class="site-menu__item site-menu__item_extend"><a class="site-menu__link" href="#">Услуги</a>
+        </li>
+        <li class="site-menu__item"><a class="site-menu__link" href="#">Вакансии</a>
+        </li>
+        <li class="site-menu__item"><a class="site-menu__link" href="#">Новости</a>
+        </li>
+        <li class="site-menu__item site-menu__item_extend"><a class="site-menu__link" href="#">Соглашения</a>
+        </li>
+      </ul>
+      <ul class="header__user-menu header__button">
+        <li class="header__user-item">
+          <button class="btn btn_type-border"><span class="btn__text">войти</span></button>
+        </li>
+        <li class="header__user-item">
+          <button class="btn btn_type-fill"><span class="btn__text">зарегистрироваться</span></button>
+        </li>
+      </ul>
+    </header>
     <div class="landing">
-      <header class="header">
-        <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
-        <ul class="site-menu header__site-menu">
-          <li class="site-menu__item"><a class="site-menu__link" href="#">О нас</a>
-          </li>
-          <li class="site-menu__item site-menu__item_extend"><a class="site-menu__link" href="#">Услуги</a>
-          </li>
-          <li class="site-menu__item"><a class="site-menu__link" href="#">Вакансии</a>
-          </li>
-          <li class="site-menu__item"><a class="site-menu__link" href="#">Новости</a>
-          </li>
-          <li class="site-menu__item site-menu__item_extend"><a class="site-menu__link" href="#">Соглашения</a>
-          </li>
-        </ul>
-        <ul class="header__user-menu header__button">
-          <li class="header__user-item">
-            <button class="btn btn_type-border"><span class="btn__text">войти</span></button>
-          </li>
-          <li class="header__user-item">
-            <button class="btn btn_type-fill"><span class="btn__text">зарегистрироваться</span></button>
-          </li>
-        </ul>
-      </header>
-      <div class="card card_search landing__card-search">
+      <div class="card card-search landing__card-search">
         <form class="card-search__form">
           <h1 class="card__title">Найдём номера под ваши пожелания</h1>
           <div class="card-search__field-wrapper calendar">
             <div class="field field_dropdown card-search__input">
-              <label class="field__label" for="arrival">прибытие</label>
-              <input class="field__input calendar__input" id="arrival" placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly>
+              <label class="field__label">прибытие</label>
+              <input class="field__input calendar__input" placeholder="ДД.ММ.ГГГГ" date-direction="arrival" autocomplete="off" readonly>
             </div>
             <div class="field field_dropdown card-search__input">
-              <label class="field__label" for="checkOut">выезд</label>
-              <input class="field__input calendar__input" id="checkOut" placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly>
+              <label class="field__label">выезд</label>
+              <input class="field__input calendar__input" placeholder="ДД.ММ.ГГГГ" date-direction="checkOut" autocomplete="off" readonly>
             </div>
           </div>
           <div class="dropdown card-search__input">
             <div class="field field_dropdown">
               <label class="field__label" for="full">гости</label>
-              <input class="field__input dropdown__input" value="Сколько гостей" id="full" autocomplete="off" readonly>
+              <input class="field__input dropdown__input" id="full" placeholder="Сколько гостей" autocomplete="off" readonly>
             </div>
             <div class="dropdown__total">
               <ul class="dropdown__list">
                 <li class="dropdown__item"><span class="dropdown__text">Взрослые</span>
                   <div class="controler dropdown__controler">
-                    <button class="controler__button controler__button_minus">-</button>
+                    <button class="controler__button controler__button_minus"><span>-</span></button>
                     <input class="controler__number" value="0" readonly name="guests">
-                    <button class="controler__button controler__button_plus">+</button>
+                    <button class="controler__button controler__button_plus"> <span>+</span></button>
                   </div>
                 </li>
                 <li class="dropdown__item"><span class="dropdown__text">Дети</span>
                   <div class="controler dropdown__controler">
-                    <button class="controler__button controler__button_minus">-</button>
+                    <button class="controler__button controler__button_minus"><span>-</span></button>
                     <input class="controler__number" value="0" readonly name="guests">
-                    <button class="controler__button controler__button_plus">+</button>
+                    <button class="controler__button controler__button_plus"> <span>+</span></button>
                   </div>
                 </li>
                 <li class="dropdown__item"><span class="dropdown__text">Младенцы</span>
                   <div class="controler dropdown__controler">
-                    <button class="controler__button controler__button_minus">-</button>
+                    <button class="controler__button controler__button_minus"><span>-</span></button>
                     <input class="controler__number" value="0" readonly name="baby">
-                    <button class="controler__button controler__button_plus">+</button>
+                    <button class="controler__button controler__button_plus"> <span>+</span></button>
                   </div>
                 </li>
               </ul>
@@ -152,5 +153,5 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"> </script>
-  <script type="text/javascript" src="/assets/js/vendors.85105841d7f7893b79ef.js"></script><script type="text/javascript" src="/assets/js/app.e3a51fc0df50424e69cd.js"></script></body>
+  <script type="text/javascript" src="/assets/js/vendors.881be7ad71ac88556908.js"></script><script type="text/javascript" src="/assets/js/app.35e4b978fef839ec8024.js"></script></body>
 </html>

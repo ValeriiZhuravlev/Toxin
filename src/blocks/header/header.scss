@@ -4,9 +4,10 @@
 @import './header__site-menu/header__site-menu.scss';
 @import './header__button/header__button.scss';
 @import './header__logo/header__logo.scss';
+@import './header_landing/header_landing.scss';
 
 .header {
-   
+    z-index: 99;
     max-width: $max-width;
     min-width: $min-width;
     background-color: #fff;
@@ -14,7 +15,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    padding: 11px 42px 13px 50px;
+    padding: 11px 52px 13px 50px;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     box-sizing: border-box;
     justify-content: space-between;
 }

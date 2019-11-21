@@ -8,14 +8,14 @@ mixin card-search()
             .card-search__field-wrapper.calendar
                 +input({
                     label:'прибытие',
-                    id:'arrival',
+                    direction:'arrival',
                     placeholder: 'ДД.ММ.ГГГГ',
                     dropdown: true,
                     class: 'calendar__input'
                 })(class='card-search__input')
                 +input({
                     label:'выезд',
-                    id:'checkOut',
+                    direction:'checkOut',
                     placeholder: 'ДД.ММ.ГГГГ',
                     dropdown: true,
                     class: 'calendar__input'

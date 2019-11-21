@@ -1,0 +1,20 @@
+include ../input/input
+
+mixin conditions()
+    .conditions&attributes(attributes)
+        .conditions__title checkbox buttons
+        +input({
+            label: 'Можно курить',
+            type: 'checkbox',
+            id:'smoke'
+        })
+        +input({
+            label: 'Можно с питомцами',
+            type: 'checkbox',
+            id:'pet'
+        })
+        +input({
+            label: 'Можно пригласить гостей (до 10 человек)',
+            type: 'checkbox',
+            id:'invite'
+        })

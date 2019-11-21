@@ -6,8 +6,8 @@
 
 .datepicker-inline {
     position: absolute;
-    top: 90px;
-    z-index: 4;
+    margin-top: 5px;
+    z-index: 10;
 }
 
 .calendar {
@@ -15,5 +15,5 @@
 }
 
 .datepicker {
-    width: 100%;
+    min-width: 320px;
 }

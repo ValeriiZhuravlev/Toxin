@@ -1,0 +1,45 @@
+include ../input/input
+include ../dropdown/dropdown
+include ../range/range
+include ../conditions/conditions
+
+
+mixin filter()
+    .filter&attributes(attributes)
+        .calendar.filter__field
+            +input({
+                label: 'даты пребывания в отеле',
+                placeholder: 'ДД.ММ.ГГГГ',
+                dropdown: true,
+                direction: 'bothDirection',
+                class: 'calendar__input',
+                id: 'stayDate'
+            })
+        +dropdown({
+            optInput: [{
+                label:'гости',
+                id:'full',
+                dropdown: true,
+                placeholder: 'Сколько гостей',
+                class: 'dropdown__input'
+            }], 
+            optDrop: [
+                {name: 'Взрослые', word: 'guests'},
+                {name: 'Дети', word: 'guests'},
+                {name: 'Младенцы', word: 'baby'}
+            ],
+            optButton: [
+                {
+                    text: 'Применить',
+                    type: 'inline-purple',
+                    role: 'apply'
+                },{
+                    text: 'Очистить',
+                    type: 'inline-grey',
+                    role: 'clear'
+                }] 
+        })(class='filter__field')
+        +range()(class='filter__field')
+        +conditions()(class='filter__field')
+
+

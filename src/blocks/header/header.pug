@@ -4,7 +4,7 @@ include user-menu/user-menu
 include ../logo/logo
 
 mixin header(opt)
-  header.header
+  header.header&attributes(attributes)
     +logo()(class="header__logo")
     -
       siteMenu = opt.siteMenu || 

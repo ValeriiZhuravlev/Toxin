@@ -4,11 +4,15 @@ mixin input(opt)
     if dropdown 
        .field.field_dropdown&attributes(attributes)
             label.field__label(for=opt.id)= opt.label
-            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder,autocomplete="off" readonly)
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, date-direction=opt.direction, autocomplete="off" readonly)
     else if expandable                                                                                  
        .field.field_expandable&attributes(attributes)
             label.field__label(for=opt.id)= opt.label
             input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, autocomplete="off")
+    else if opt.type === 'checkbox'
+      .field.field_checkbox&attributes(attributes)
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, autocomplete="off")
+            label.field__label(for=opt.id)= opt.label
     else 
        .field&attributes(attributes)                                            
             label.field__label(for=opt.id)= opt.label

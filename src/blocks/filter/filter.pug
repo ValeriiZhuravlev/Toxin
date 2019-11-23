@@ -1,11 +1,12 @@
 include ../input/input
 include ../dropdown/dropdown
 include ../range/range
-include ../conditions/conditions
+include ../checkboxList/checkboxList
+include ../additional-list/additional-list
 
 
 mixin filter()
-    .filter&attributes(attributes)
+    form.filter&attributes(attributes)
         .calendar.filter__field
             +input({
                 label: 'даты пребывания в отеле',
@@ -13,15 +14,17 @@ mixin filter()
                 dropdown: true,
                 direction: 'bothDirection',
                 class: 'calendar__input',
-                id: 'stayDate'
-            })
+                id: 'stayDate',
+                value: '19 авг - 23 авг'
+            })(class='filter__calendar')
         +dropdown({
             optInput: [{
                 label:'гости',
                 id:'full',
                 dropdown: true,
                 placeholder: 'Сколько гостей',
-                class: 'dropdown__input'
+                class: 'dropdown__input',
+                value: '3 гостя, 1 младенец'
             }], 
             optDrop: [
                 {name: 'Взрослые', word: 'guests'},
@@ -38,8 +41,119 @@ mixin filter()
                     type: 'inline-grey',
                     role: 'clear'
                 }] 
-        })(class='filter__field')
-        +range()(class='filter__field')
-        +conditions()(class='filter__field')
+        })(class='filter__dropdown')
+        +range()(class='filter__range')
+        +checkboxList({
+            title: [
+                'checkbox buttons'
+            ],
+            itemList: [
+                {
+                    label: 'Можно курить',
+                    type: 'checkbox',
+                    id:'smoke'  
+                },{
+                    label: 'Можно с питомцами',
+                    type: 'checkbox',
+                    id:'pet',
+                    checked: 'true'
+                },{
+                    label: 'Можно пригласить гостей (до 10 человек)',
+                    type: 'checkbox',
+                    id:'invite',
+                    checked: 'true'
+                }
+            ]
+        })(class='filter__conditions')
+        +checkboxList({
+            title: [
+                'Доступность'
+            ],
+            itemList: [
+                {
+                   id: 'width',
+                   type: 'checkbox',
+                   label: 'Широкий коридор',
+                   labelDescription: `Ширина коридоров в номере 
+не менее 91 см.`
+                },
+                {
+                   id: 'disabled',
+                   type: 'checkbox',
+                   label: 'Помощник для инвалидов',
+                   labelDescription: `На 1 этаже вас встретит специалист
+и проводит до номера.`
+                }
+            ]
+        })(class='filter__accessibility')
+        +dropdown({
+            optInput: [{
+                label:'Удобства номера',
+                id:'comfort',
+                dropdown: true,
+                placeholder: '',
+                class: 'dropdown__input',
+                value: '2 спальни, 2 кровати...'
+            }], 
+            optDrop: [
+                {name: 'Спальни', word: 'bedrooms'},
+                {name: 'Кровати', word: 'beds'},
+                {name: 'Ванные комнаты', word: 'bathrooms'}
+            ],
+            optButton: [
+                {
+                    text: 'Применить',
+                    type: 'inline-purple',
+                    role: 'apply'
+                },{
+                    text: 'Очистить',
+                    type: 'inline-grey',
+                    role: 'clear'
+                }] 
+        })(class='filter__comfort')
+        +additional-list({
+            title: [
+                'Дополнительные удобства'
+            ],
+            itemList: [
+                {
+                    label: 'Завтрак',
+                    type: 'checkbox',
+                    id: 'breakfast'
+                },{
+                    label: 'Письменный стол',
+                    type: 'checkbox',
+                    id: 'table',
+                    checked: true
+                },{
+                    label: 'Стул для кормления',
+                    type: 'checkbox',
+                    id: 'chair',
+                    checked: true
+                },{
+                    label: 'Кроватка',
+                    type: 'checkbox',
+                    id: 'bed',
+                    checked: true
+                },{
+                    label: 'Телевизор',
+                    type: 'checkbox',
+                    id: 'tv'
+                },{
+                    label: 'Шампунь',
+                    type: 'checkbox',
+                    id: 'shampoo'
+                },{
+                    label: 'Телевизор',
+                    type: 'checkbox',
+                    id: 'tv2'
+                },{
+                    label: 'Шампунь',
+                    type: 'checkbox',
+                    id: 'shampoo2'
+                }
+
+            ]
+        })
 
 

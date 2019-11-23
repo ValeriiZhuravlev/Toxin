@@ -1,0 +1,10 @@
+.field__description {
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: pre;
+    
+    &:not(:first-child) {
+        margin-bottom: -6px;
+    }
+
+}

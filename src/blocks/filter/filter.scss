@@ -1,7 +1,16 @@
-@import './filter__field/filter__field';
+@import '../calendar/calendar.scss';
+@import '../dropdown/dropdown.scss';
 @import '../range/range.scss';
+@import '../checkboxList/checkboxList.scss';
+@import '../additional-list/additional-list.scss';
+@import './filter__calendar/filter__calendar.scss';
+@import './filter__dropdown/filter__dropdown.scss';
+@import './filter__range/filter__range.scss';
+@import './filter__conditions/filter__conditions.scss';
+@import './filter__accessibility/filter__accessibility.scss';
+@import './filter__comfort/filter__comfort.scss';
 
 .filter {
-    max-width: 265px;
+    max-width: 266px;
     margin-left: 50px;
 }

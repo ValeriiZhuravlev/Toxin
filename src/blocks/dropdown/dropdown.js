@@ -1,8 +1,13 @@
 const dropdown = function() {
     let words = {
         guests : ['', 'гость', 'гостя', 'гостей'],
-        baby: ['', 'младенец', 'младенца', 'младенцев']
+        baby: ['', 'младенец', 'младенца', 'младенцев'],
+        bedrooms: ['', 'спальня', 'спальни', 'спален'],
+        beds: ['', 'кровать', 'кровати', 'кроватей'],
+        bathrooms: ['', 'ванная комната', 'ванные комнаты', 'ванных комнат']
     };
+
+  
 
     function rangeVal(){
         $('.controler__number').each((i, item) => {
@@ -17,9 +22,10 @@ const dropdown = function() {
         });
     }
 
-    $('.dropdown__input').focus(() => {
-        $('.dropdown__total').show();
-        $('.dropdown__input').css('border-color', 'rgba(31, 32, 65, 0.5)');
+    $('.dropdown__input').focus(function() {
+        let elem = $(this).parents('.dropdown').find('.dropdown__total');
+       elem.show();
+       $(this).css('border-color', 'rgba(31, 32, 65, 0.5)');
         rangeVal();
     });
 
@@ -59,6 +65,7 @@ const dropdown = function() {
         
         function validWords(val, number) {
             let arr = '';
+            
             if(number == 0) {
                 str += `${words[val][0]}`
             }else if(number == 1){
@@ -69,7 +76,7 @@ const dropdown = function() {
                 str +=  `${number} ${words[val][3]}, `
             }
             arr = str.substring(0, str.length-2);
-            return(arr);
+            return(arr); 
         }  
        
         input.val('');
@@ -90,8 +97,14 @@ const dropdown = function() {
             person.each((i, item) => {
                 fullVal.val += +($(item).val());
             });
+
             input.val(validWords(val, fullVal.val)); 
         });
+        let arraySet = input.val().split(',');
+        if(arraySet.length >= 3){
+            arraySet.pop();
+            input.val(`${arraySet}...`);
+        }
         rangeVal();
       });
 }();

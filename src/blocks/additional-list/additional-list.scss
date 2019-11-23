@@ -1,0 +1,7 @@
+@import './additional-list__title/additional-list__title.scss';
+@import './additional-list__list/additional-list__list.scss';
+@import './additional-list__input/additional-list__input.scss';
+
+.additional-list[open] .additional-list__title::after {
+    transform: rotate(180deg);
+}

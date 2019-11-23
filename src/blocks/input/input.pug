@@ -9,9 +9,15 @@ mixin input(opt)
        .field.field_expandable&attributes(attributes)
             label.field__label(for=opt.id)= opt.label
             input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, autocomplete="off")
+    else if opt.type === 'checkbox' && opt.labelDescription
+        .field.field_checkbox&attributes(attributes)
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, checked=opt.checked, autocomplete="off")
+            label.field__label(for=opt.id)
+                p.field__title= opt.label
+                p.field__description= opt.labelDescription      
     else if opt.type === 'checkbox'
       .field.field_checkbox&attributes(attributes)
-            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, autocomplete="off")
+            input.field__input(class=opt.class, value=opt.value, type=opt.type, id=opt.id, placeholder=opt.placeholder, checked=opt.checked, autocomplete="off")
             label.field__label(for=opt.id)= opt.label
     else 
        .field&attributes(attributes)                                            

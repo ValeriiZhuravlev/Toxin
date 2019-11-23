@@ -1,0 +1,11 @@
+include ../input/input
+
+mixin additional-list(opt)
+    -title = opt.title || {};
+    -itemList = opt.itemList || {};
+    details.additional-list
+        summary.additional-list__title= title
+        ul.additional-list__list
+            each item in itemList
+                li.additional-list__item
+                    +input(item)(class='additional-list__input')

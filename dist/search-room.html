@@ -6,7 +6,7 @@
     <title>Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css">
-  <link href="/assets/css/app.bc23756cb7f8a382d474.css" rel="stylesheet"></head>
+  <link href="/assets/css/app.d3948086688f65135b5a.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header">
       <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
@@ -32,17 +32,17 @@
       </ul>
     </header>
     <main class="main main_search">
-      <div class="filter">
+      <form class="filter">
         <div class="calendar filter__field">
           <div class="field field_dropdown filter__calendar">
             <label class="field__label" for="stayDate">даты пребывания в отеле</label>
-            <input class="field__input calendar__input" id="stayDate" placeholder="ДД.ММ.ГГГГ" date-direction="bothDirection" autocomplete="off" readonly>
+            <input class="field__input calendar__input" value="19 авг - 23 авг" id="stayDate" placeholder="ДД.ММ.ГГГГ" date-direction="bothDirection" autocomplete="off" readonly>
           </div>
         </div>
         <div class="dropdown filter__dropdown">
           <div class="field field_dropdown">
             <label class="field__label" for="full">гости</label>
-            <input class="field__input dropdown__input" id="full" placeholder="Сколько гостей" autocomplete="off" readonly>
+            <input class="field__input dropdown__input" value="3 гостя, 1 младенец" id="full" placeholder="Сколько гостей" autocomplete="off" readonly>
           </div>
           <div class="dropdown__total">
             <ul class="dropdown__list">
@@ -82,7 +82,7 @@
           <div class="range__input"></div>
           <p class="range__text">Стоимость за сутки пребывания в номере</p>
         </div>
-        <div class="checkboxList filter__checkboxList-conditions">
+        <div class="checkboxList filter__conditions">
           <p class="checkboxList__title">checkbox buttons
             <div class="field field_checkbox checkboxList__input">
               <input class="field__input" type="checkbox" id="smoke" autocomplete="off">
@@ -98,26 +98,133 @@
             </div>
           </p>
         </div>
-        <div class="checkboxList">
+        <div class="checkboxList filter__accessibility">
           <p class="checkboxList__title">Доступность
             <div class="field field_checkbox checkboxList__input">
               <input class="field__input" type="checkbox" id="width" autocomplete="off">
               <label class="field__label" for="width">
                 <p class="field__title">Широкий коридор</p>
-                <p class="field__description">Ширина коридоров в номере не менее 91 см.</p>
+                <p class="field__description">Ширина коридоров в номере 
+не менее 91 см.</p>
               </label>
             </div>
             <div class="field field_checkbox checkboxList__input">
               <input class="field__input" type="checkbox" id="disabled" autocomplete="off">
               <label class="field__label" for="disabled">
                 <p class="field__title">Помощник для инвалидов</p>
-                <p class="field__description">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                <p class="field__description">На 1 этаже вас встретит специалист
+и проводит до номера.</p>
               </label>
             </div>
           </p>
         </div>
-      </div>
-      <div class="test"></div>
+        <div class="dropdown filter__comfort">
+          <div class="field field_dropdown">
+            <label class="field__label" for="comfort">Удобства номера</label>
+            <input class="field__input dropdown__input" value="2 спальни, 2 кровати..." id="comfort" placeholder="" autocomplete="off" readonly>
+          </div>
+          <div class="dropdown__total">
+            <ul class="dropdown__list">
+              <li class="dropdown__item"><span class="dropdown__text">Спальни</span>
+                <div class="controler dropdown__controler">
+                  <button class="controler__button controler__button_minus"><span>-</span></button>
+                  <input class="controler__number" value="0" readonly name="bedrooms">
+                  <button class="controler__button controler__button_plus"> <span>+</span></button>
+                </div>
+              </li>
+              <li class="dropdown__item"><span class="dropdown__text">Кровати</span>
+                <div class="controler dropdown__controler">
+                  <button class="controler__button controler__button_minus"><span>-</span></button>
+                  <input class="controler__number" value="0" readonly name="beds">
+                  <button class="controler__button controler__button_plus"> <span>+</span></button>
+                </div>
+              </li>
+              <li class="dropdown__item"><span class="dropdown__text">Ванные комнаты</span>
+                <div class="controler dropdown__controler">
+                  <button class="controler__button controler__button_minus"><span>-</span></button>
+                  <input class="controler__number" value="0" readonly name="bathrooms">
+                  <button class="controler__button controler__button_plus"> <span>+</span></button>
+                </div>
+              </li>
+            </ul>
+            <div class="dropdown__buttons">
+              <button class="btn_type-inline-purple" date-role="apply">Применить</button>
+              <button class="btn_type-inline-grey" date-role="clear">Очистить</button>
+            </div>
+          </div>
+        </div>
+        <details class="additional-list">
+          <summary class="additional-list__title">Дополнительные удобства</summary>
+          <ul class="additional-list__list">
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="breakfast" autocomplete="off">
+                <label class="field__label" for="breakfast">Завтрак</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="table" checked autocomplete="off">
+                <label class="field__label" for="table">Письменный стол</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="chair" checked autocomplete="off">
+                <label class="field__label" for="chair">Стул для кормления</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="bed" checked autocomplete="off">
+                <label class="field__label" for="bed">Кроватка</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="tv" autocomplete="off">
+                <label class="field__label" for="tv">Телевизор</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="shampoo" autocomplete="off">
+                <label class="field__label" for="shampoo">Шампунь</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="tv2" autocomplete="off">
+                <label class="field__label" for="tv2">Телевизор</label>
+              </div>
+            </li>
+            <li class="additional-list__item">
+              <div class="field field_checkbox additional-list__input">
+                <input class="field__input" type="checkbox" id="shampoo2" autocomplete="off">
+                <label class="field__label" for="shampoo2">Шампунь</label>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </form>
+      <section class="products">
+        <h1 class="products__header">Номера, которые мы для вас подобрали</h1>
+        <ul class="products__list">
+          <article class="room">
+            <ul class="room__gallery">
+              <li class="roon__img"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></li>
+            </ul>
+            <div class="room__info">
+              <div class="room__number"></div>
+              <div class="room__price"></div>
+            </div>
+            <div class="room__stats">
+              <div class="raiting"></div>
+              <div class="room__reviews"> </div>
+            </div>
+          </article>
+        </ul>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__main">
@@ -189,5 +296,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"> </script>
-  <script type="text/javascript" src="/assets/js/vendors.85105841d7f7893b79ef.js"></script><script type="text/javascript" src="/assets/js/app.df585877fc918a982cb4.js"></script></body>
+  <script type="text/javascript" src="/assets/js/vendors.85105841d7f7893b79ef.js"></script><script type="text/javascript" src="/assets/js/app.7cd85db79ca35353ec57.js"></script></body>
 </html>

@@ -1,0 +1,30 @@
+include ../raiting/raiting
+
+mixin room(opt)
+    -opt = opt || {};
+    -rooms = opt.rooms || {};
+    .room
+        ul.room__gallery
+            each item in rooms
+                li.room__img
+                    img(src=require(`../blocks/room/img/${item}.jpg`) width="271" height="152" alt=`${item}`)
+            .room__prev
+            .room__next
+            ul.swicher
+                li.swicher__item
+                li.swicher__item
+                li.swicher__item
+                li.swicher__item
+        .room__info
+            span.room__number
+                span № 
+                =opt.number
+                
+            if(opt.luxury)
+               span.room__luxury  люкс
+            b.room__price= `${opt.price}₽`
+                span  в сутки
+            .room__stats
+                +raiting(opt.stars)(class='room__raiting')
+                span.room__reviews= opt.reviews
+                    span  Отзывов

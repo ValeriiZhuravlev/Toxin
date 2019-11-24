@@ -1,0 +1,17 @@
+include ../room/room
+
+mixin products()
+    section.products
+        h1.products__header Номера, которые мы для вас подобрали
+        ul.products__list
+            +room({
+                rooms: [
+                '840', '980', '856', '888' 
+                ],
+                number: ['888'],
+                price: ['9 990'],
+                reviews: ['145'],
+                luxury: true,
+                stars: 5
+            })
+            

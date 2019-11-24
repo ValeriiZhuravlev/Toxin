@@ -1,0 +1,11 @@
+mixin raiting(qt)
+    -qt = qt || {};
+    .raiting&attributes(attributes)
+        ul.raiting__stars
+            -for (let i = 0; i < qt; i++)
+                li.raiting__star
+                    img(src=require('../blocks/raiting/img/star.svg') width='20' height='19' alt='Star')
+            -for (let i =  qt; i < 5; i++)
+                li.raiting__star
+                    img(src=require('../blocks/raiting/img/star_border.svg') width='20' height='19' alt='Star')    
+

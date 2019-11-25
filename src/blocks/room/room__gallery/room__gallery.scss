@@ -1,8 +1,11 @@
+@import '../room__arrows/room__arrows.scss';
+
 .room__gallery {
     position: relative;
     height: 152px;
     padding: 0;
     margin: 0;
     list-style: none;
-    border-radius: 3px;
+    background: grey;
+    border-radius: 4px 4px 0 0;
 }

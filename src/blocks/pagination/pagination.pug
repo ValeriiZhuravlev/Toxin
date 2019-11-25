@@ -1,0 +1,22 @@
+include ../link/link
+
+mixin pagination()
+    .pagination&attributes(attributes)
+
+            +link(class='pagination__page pagination__icon pagination__icon_prev')
+                ='Prev'
+            +link(class='pagination__page pagination__page_active')
+                =1
+            +link(class='pagination__page')
+                =2
+            +link(class='pagination__page')
+                =3
+            span.pagination__page ...
+            +link(class='pagination__page')
+                =15
+            +link(class='pagination__page pagination__icon pagination__icon_next')
+                ='Next'
+            p.products__text 1-12 из 100+ вариантов аренды
+        
+        
+

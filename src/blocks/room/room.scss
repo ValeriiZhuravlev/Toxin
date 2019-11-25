@@ -2,10 +2,9 @@
 @import './room__img/room__img.scss';
 @import './room__info/room__info.scss';
 @import './room__luxury/room__luxury.scss';
-@import './room__prev/room__prev.scss';
-@import './room__next/room__next.scss';
+@import './swicher/swicher.scss';
 
 .room {
-    width: 270px;
+    max-width: 270px;
     border-radius: 4px;
 }

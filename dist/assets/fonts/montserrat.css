@@ -19,7 +19,16 @@
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('assets/fonts/Quicksand-Bold.ttf') format('truetype');
+    src: url('assets/fonts/Quicksand-Bold.ttf') format('truetype'),
+         url('assets/fonts/Quicksand-Bold.woff') format('woff'),
+         url('assets/fonts/Quicksand-Bold.eot');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open-sans';
+    src: url('assets/fonts/OpenSans-Bold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }

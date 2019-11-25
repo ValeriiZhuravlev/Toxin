@@ -1,25 +1,25 @@
 include ../raiting/raiting
 
+
 mixin room(opt)
     -opt = opt || {};
     -rooms = opt.rooms || {};
-    .room
+    article.room&attributes(attributes)
         ul.room__gallery
             each item in rooms
                 li.room__img
                     img(src=require(`../blocks/room/img/${item}.jpg`) width="271" height="152" alt=`${item}`)
-            .room__prev
-            .room__next
-            ul.swicher
-                li.swicher__item
-                li.swicher__item
-                li.swicher__item
-                li.swicher__item
+            .room__arrows.room__arrows_prev
+            .room__arrows.room__arrows_next
+            .swicher
+                button.swicher__item(value=1).swicher__item_active
+                button.swicher__item(value=2)
+                button.swicher__item(value=3)
+                button.swicher__item(value=4)
         .room__info
             span.room__number
                 span № 
-                =opt.number
-                
+                =opt.number         
             if(opt.luxury)
                span.room__luxury  люкс
             b.room__price= `${opt.price}₽`

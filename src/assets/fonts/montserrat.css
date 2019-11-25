@@ -26,5 +26,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Open-sans';
+    src: url('assets/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 
 

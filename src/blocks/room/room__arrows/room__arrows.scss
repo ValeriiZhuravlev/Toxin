@@ -1,0 +1,34 @@
+.room__gallery:hover,
+.room_active {
+    .room__arrows {
+        width: 42px;
+        height: 151px;
+        background: linear-gradient(90deg, 
+                  rgba(0, 0, 0, 0.5) 0%, 
+                  rgba(0, 0, 0, 0) 99.99%, 
+                  rgba(255, 255, 255, 0) 100%);
+        border-radius: 4px 4px 0 0;
+        top: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 42px;
+            height: 151px;
+            background: url('./assets/img/expand_more-white.svg') no-repeat center;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+    }
+    
+    .room__arrows_prev {
+        position: absolute;
+        left: 0;
+    }
+    
+    .room__arrows_next {
+        position: absolute;
+        right: 2px;
+        transform: matrix(-1, 0, 0, 1, 2, 0);
+    }
+}

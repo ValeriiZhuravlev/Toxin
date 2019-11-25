@@ -1,0 +1,18 @@
+.pagination__page {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 12px;
+    width: 40px;
+    height: 40px;
+    color: $darkShade50;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.pagination__page_active {
+    font-weight: 800;
+    border-radius: 50%;
+    background: $purpleLinearGradient;
+    color: #fff;
+}

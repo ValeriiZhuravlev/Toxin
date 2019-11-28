@@ -1,0 +1,27 @@
+.pie-chart__marker {
+    color: $darkShade75;
+    padding-bottom: 8px;
+
+    &:before { 
+            content: '';
+            position: absolute;
+            display: block;
+            margin-top: 2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: -16px;
+        }
+        &_perfectly::before {
+            background: $yellowLinearGradient;
+        }
+        &_good::before {
+            background: $greenLinearGradient;
+        }
+        &_fair::before {
+            background: $purpleLinearGradient;
+        }
+        &_badly::before {
+            background: $blackLinearGradient;
+        }
+}

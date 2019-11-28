@@ -1,9 +1,11 @@
 .room__img {
+    position: absolute;
     display: none;
     &:first-child {
         display: block;
     }
     img {
+        
         width: 100%;
         border-radius: 4px 4px 0 0;
     }

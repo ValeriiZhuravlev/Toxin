@@ -1,0 +1,70 @@
+include ../../input/input
+include ../../button/button
+include ../../dropdown/dropdown
+include ../../stats-room/stats-room
+include ../../calculator/calculator
+
+
+mixin card-reservation(opt)
+    -opt = opt || {};
+    +stats-room(opt)(class='card-reservation__stats-room')
+    form.card-reservation__form
+        .field-wrapper.calendar
+            +input({
+                label:'прибытие',
+                direction:'arrival',
+                placeholder: 'ДД.ММ.ГГГГ',
+                dropdown: true,
+                class: 'calendar__input'
+            })(class='card-reservation__input')
+            +input({
+                label:'выезд',
+                direction:'checkOut',
+                placeholder: 'ДД.ММ.ГГГГ',
+                dropdown: true,
+                class: 'calendar__input'
+            })(class='card-reservation__input')
+        +dropdown({
+            optInput: [{
+                label:'гости',
+                id:'full',
+                dropdown: true,
+                placeholder: 'Сколько гостей',
+                class: 'dropdown__input'
+            }], 
+            optDrop: [
+                {name: 'Взрослые', word: 'guests'},
+                {name: 'Дети', word: 'guests'},
+                {name: 'Младенцы', word: 'baby'}
+            ],
+            optButton: [
+                {
+                    text: 'Применить',
+                    type: 'inline-purple',
+                    role: 'apply'
+                },{
+                    text: 'Очистить',
+                    type: 'inline-grey',
+                    role: 'clear'
+                }]      
+            })(class='card-reservation__dropdown')
+        +calculator({
+            calcVal: [{
+                name: '9 990₽ х 4 суток',
+                value: '39 960₽'
+            },{
+                name: 'Сбор за услуги: скидка 2 179₽',
+                value: '0₽',
+                info: true 
+            },{
+               name: 'Сбор за дополнительные услуги',
+               value: '300₽',
+               info: true  
+            }],
+            total: '38 081₽'
+        })(class='card-reservation__calculator')
+        +button('забронировать', type='fill',true)(class='card-reservation__button')
+
+
+       
+        

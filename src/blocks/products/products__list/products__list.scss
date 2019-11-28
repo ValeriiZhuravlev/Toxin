@@ -4,3 +4,9 @@
     margin-top: 24px;
     margin-left: 5.9%;
 }
+
+@media screen and (max-width: $smDesktopWidth) {
+    .products__list {
+        margin-left: 0;
+    }
+}

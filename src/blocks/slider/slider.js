@@ -1,46 +1,61 @@
 const slider = function() {
     let slideIndex = 1;
-    function showSlides(e, n) {
-        let event = e.target;
-        let elem = $(event).parents('.room__gallery');
-        let slides = elem.find('.room__img');
-        let swicherWrap = elem.find('.swicher');
-        let swicher = elem.find('.swicher__item');
-        if(n > slides.length) {
-            slideIndex = 1;
+    function getIndexSlide() {
+        let swicher = $(this).val();
+        let swichers = $(this).parents('.room__gallery').find('.swicher__item');
+        let slider = $(this).parents('.room__gallery').find('.room__img');
+        function getValue() {
+            swichers.each((i, item) => {
+                if(item.classList.contains('swicher__item_active')) {
+                    slideIndex = +($(item).val());
+                }
+            });
         }
-        if(n < 1) {
-            slideIndex = slides.length; 
+        getValue();
+
+        function swichSlide() {
+            $(slider[slideIndex-1]).fadeIn('500');
+            $(swichers[slideIndex-1]).addClass('swicher__item_active');
         }
-        slides.each((i, item) => {
-            $(item).hide();
-        });
-        swicher.each((i, item) => {
+
+        swichers.each((i, item) => {
             $(item).removeClass('swicher__item_active');
         });
-        $(slides[slideIndex-1]).show();
-        $(swicher[slideIndex-1]).addClass('swicher__item_active');
-    }
-    function plusSlide(e, n) {
-        showSlides(e, slideIndex += n);
-    }
-    function currentSlide(e, n) {
-        showSlides(e, slideIndex = n);
-    }
-    $('.room__arrows_prev').on('click', function(e) {
-        plusSlide(e, -1);
-    });
-    $('.room__arrows_next').on('click', function(e) {
-        plusSlide(e, 1);
-    });
 
-    $('.swicher').on('click', function(e) {
-        let event = e.target;
-         if(event.classList.contains('swicher__item')){
-            let val = $(event).val();
-            currentSlide(e, +(val));
-         }   
-        });     
+        slider.each((i, item) => {
+            $(item).fadeOut();
+        });
+
+        if(this.classList.contains('swicher__item')) {
+            slideIndex = +($(this).val());
+            swichSlide();
+        }
+
+        if(this.classList.contains('room__arrows_prev')) {
+
+            getValue();
+            slideIndex -= 1;
+            if(slideIndex < 1) {
+                slideIndex = slider.length;
+            }
+            swichSlide();
+        }
+
+        if(this.classList.contains('room__arrows_next')) {
+            getValue();
+            slideIndex += 1;
+            if(slider.length < slideIndex) {
+                slideIndex = 1;
+            }
+            swichSlide();
+        }
+        
+    }
+        
+    
+    $('.swicher__item').on('click', getIndexSlide);
+    $('.room__arrows_prev').on('click', getIndexSlide);
+    $('.room__arrows_next').on('click', getIndexSlide);
 }();
 
 module.exports = slider;

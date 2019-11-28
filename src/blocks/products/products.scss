@@ -5,3 +5,10 @@
 @import './products__header/products__header.scss';
 @import './products__pagination/products__pagination.scss';
 @import '../pagination/pagination.scss';
+
+@media screen and (max-width: $smDesktopWidth) {
+    .products {
+        margin-top: 100px;
+        margin-left: 0;
+    }
+}

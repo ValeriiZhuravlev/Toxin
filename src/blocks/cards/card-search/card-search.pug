@@ -5,7 +5,7 @@ include ../../dropdown/dropdown
 mixin card-search()
         form.card-search__form
             h1.card__title Найдём номера под ваши пожелания
-            .card-search__field-wrapper.calendar
+            .field-wrapper.calendar
                 +input({
                     label:'прибытие',
                     direction:'arrival',
@@ -45,4 +45,4 @@ mixin card-search()
                     }] 
                  
             })(class='card-search__input')
-            +button('подобрать номер', type='fill',true)
+            +button('подобрать номер', type='fill',true)(class='card-search__button')

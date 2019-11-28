@@ -5,3 +5,12 @@
         margin: 0;
         padding-left: 60px;
     }
+
+
+@media screen and (max-width: $tableWidth) {
+    .products
+        .products__header {
+            text-align: center;
+            padding-left: 0;
+        }
+    }

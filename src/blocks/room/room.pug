@@ -1,4 +1,5 @@
 include ../raiting/raiting
+include ../stats-room/stats-room
 
 
 mixin room(opt)
@@ -17,13 +18,11 @@ mixin room(opt)
                 button.swicher__item(value=3)
                 button.swicher__item(value=4)
         .room__info
-            span.room__number
-                span № 
-                =opt.number         
-            if(opt.luxury)
-               span.room__luxury  люкс
-            b.room__price= `${opt.price}₽`
-                span  в сутки
+            +stats-room({
+                number: opt.number,
+                price: opt.price,
+                luxury: opt.luxury
+            })
             .room__stats
                 +raiting(opt.stars)(class='room__raiting')
                 span.room__reviews= opt.reviews

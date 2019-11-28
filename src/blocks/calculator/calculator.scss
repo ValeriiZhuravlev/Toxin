@@ -1,0 +1,12 @@
+@import './calculator__dashed/calculator__dashed.scss';
+@import './calculator__item/calculator__item.scss';
+@import './calculator__name/calculator__name.scss';
+@import './calculator__value/calculator__value.scss';
+
+.calculator {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $darkShade75;
+    border-collapse: collapse;
+}

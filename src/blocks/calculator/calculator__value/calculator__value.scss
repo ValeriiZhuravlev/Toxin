@@ -1,0 +1,9 @@
+.calculator__value {
+    display: inline-block;
+    
+    white-space: nowrap;
+
+    &_total {   
+        font-family: $secondFont;
+    }
+}

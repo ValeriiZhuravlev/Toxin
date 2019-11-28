@@ -1,7 +1,10 @@
 include card-search/card-search
+include card-reservation/card-reservation
 
-mixin card(type)
-    .card(class=`card-${type}`)&attributes(attributes)
-        case type
+mixin card(opt)
+    .card(class=`card-${opt.type}`)&attributes(attributes)
+        case opt.type
             when 'search'
                 +card-search()
+            when 'reservation'
+                +card-reservation(opt.roomData[0])

@@ -14,3 +14,10 @@
     min-width: 266px;
     margin-left: 50px;
 }
+
+@media screen and (max-width: $tableWidth) {
+    .filter {
+        width: 300px;
+        margin: 0 auto;
+    }
+}

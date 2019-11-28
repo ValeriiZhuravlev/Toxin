@@ -1,0 +1,10 @@
+mixin stats-room(opt)
+    -opt = opt || {};
+    .stats-room&attributes(attributes)
+        span.stats__number
+            span № 
+            =opt.number         
+        if(opt.luxury)
+            span.stats__luxury  люкс
+        b.stats__price= `${opt.price}₽`
+            span  в сутки

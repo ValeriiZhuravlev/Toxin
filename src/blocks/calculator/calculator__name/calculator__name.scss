@@ -1,0 +1,23 @@
+.calculator__name {
+    text-align: left;
+    display: inline-block;
+    max-width: 215px;
+    font-size: 14px;
+    &_info {
+        position: relative;
+        &:after {
+            content: 'i';
+            position: absolute;
+            top: -4px;
+            right: -26px;
+            text-align: center;
+            color: $darkShade25;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border:1px solid $darkShade25;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+    }
+}

@@ -5,3 +5,12 @@
 .additional-list[open] .additional-list__title::after {
     transform: rotate(180deg);
 }
+
+.additional-list[open] .additional-list__list {
+    animation: sweep 0.5s ease-in;
+}
+
+@keyframes sweep {
+    0% {height: 0}
+    100% {height: 300px}
+}

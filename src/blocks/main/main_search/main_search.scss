@@ -1,4 +1,13 @@
 .main_search {
     padding-top: 30px;
     display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 60px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .main_search {
+        flex-direction:column;
+    }
 }

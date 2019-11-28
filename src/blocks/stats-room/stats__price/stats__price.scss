@@ -1,0 +1,10 @@
+.stats__price {
+    float: right;
+    color: $darkShade50;
+    padding-top: 3px;
+
+    span {
+        font-weight: 400;
+        font-size: 12px;
+    }
+}

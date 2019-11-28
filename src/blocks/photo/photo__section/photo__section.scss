@@ -1,0 +1,20 @@
+.photo__section {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    &_right {
+        width: 32vw;
+    }
+    .photo__img:last-child {
+        position: relative;
+        top: -1px;
+    }
+}
+
+@media screen and (max-width: $tableWidth) {
+    .photo__section {
+        &_right {
+            width: 80vw;
+        }
+    }
+}

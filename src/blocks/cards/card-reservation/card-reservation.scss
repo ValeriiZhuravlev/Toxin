@@ -1,0 +1,20 @@
+@import '../../calculator/calculator.scss';
+@import './card-reservation__button/card-reservation__button.scss';
+@import './card-reservation__calculator/card-reservation__calculator.scss';
+@import './card-reservation__dropdown/card-reservation__dropdown.scss';
+@import './card-reservation__input/card-reservation__input.scss';
+@import './card-reservation__button/card-reservation__button.scss';
+@import './card-reservation__stats-room/card-reservation__stats-room.scss';
+
+.card-reservation {
+    max-width: 380px;
+    padding: 40px 30px;
+
+    .stats__number {
+        font-size: 25px;
+    }
+
+    .stats__price {
+        margin-top: 5px;
+    }
+}

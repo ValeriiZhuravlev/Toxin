@@ -1,15 +1,17 @@
-@import "assets/style_utils/libs";
-@import "assets/style_utils/vars";
-@import "assets/style_utils/normalize";
-@import "assets/fonts/montserrat";
+@import 'assets/style_utils/libs';
+@import 'assets/style_utils/vars';
+@import 'assets/style_utils/normalize';
+@import 'assets/fonts/montserrat';
 
 
 
-@import "./blocks/body/body.scss";
-@import "./blocks/landing/landing.scss";
-@import "./blocks/header/header.scss";
-@import "./blocks/cards/card.scss";
-@import "./blocks/footer/footer.scss";
-@import "./blocks/main/main.scss";
-@import "./blocks/filter/filter.scss";
-@import "./blocks/products/products.scss";
+@import './blocks/body/body.scss';
+@import './blocks/landing/landing.scss';
+@import './blocks/header/header.scss';
+@import './blocks/cards/card.scss';
+@import './blocks/footer/footer.scss';
+@import './blocks/main/main.scss';
+@import './blocks/filter/filter.scss';
+@import './blocks/products/products.scss';
+@import './blocks/pie-chart/pie-chart.scss';
+@import './blocks/photo/photo.scss';

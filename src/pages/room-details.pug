@@ -1,0 +1,16 @@
+extends toxin
+
+block title
+    title Details
+
+block content
+    +header({})
+    +photo()
+    +card({type: 'reservation',
+          roomData: [{
+              number: '888',
+              luxury: true,
+              price: '9 990'
+          }]
+    })
+    +footer({})

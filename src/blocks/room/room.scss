@@ -3,8 +3,15 @@
 @import './room__info/room__info.scss';
 @import './room__luxury/room__luxury.scss';
 @import './swicher/swicher.scss';
+@import '../stats-room/stats-room.scss';
 
 .room {
-    max-width: 270px;
+    width: 270px;
     border-radius: 4px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+    .room {
+        margin: 0 auto;
+    }
 }

@@ -1,3 +1,8 @@
 .filter__calendar {
     margin-bottom: 20px;
 }
+
+.filter__calendar + .datepicker-inline {
+    margin-top: -15px;
+    margin-left: -25px;
+}

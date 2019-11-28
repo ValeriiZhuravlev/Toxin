@@ -1,0 +1,11 @@
+mixin calculator(opt) 
+    -opt = opt || {};
+    ul.calculator&attributes(attributes)
+        each item in opt.calcVal
+            li.calculator__item
+                div(class=`calculator__name ${item.info ? 'calculator__name_info':''}`)= item.name
+                div.calculator__value= item.value
+        li.calculator__item.calculator__item_total
+            div.calculator__name.calculator__name_total Итого
+            div.calculator__dashed
+            div.calculator__value.calculator__value_total= opt.total

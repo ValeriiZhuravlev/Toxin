@@ -6,11 +6,14 @@ block title
 block content
     +header({})
     +photo()
-    +card({type: 'reservation',
-          roomData: [{
-              number: '888',
-              luxury: true,
-              price: '9 990'
-          }]
-    })
+    +main()(class='main_details')
+        +details-info()
+        .main__wrap
+            +card({type: 'reservation',
+                roomData: [{
+                    number: '888',
+                    luxury: true,
+                    price: '9 990'
+                }]
+            })(class='main__card-reservation')
     +footer({})

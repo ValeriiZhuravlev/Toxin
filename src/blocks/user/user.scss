@@ -1,0 +1,9 @@
+@import './user__icon/user__icon.scss';
+@import './user__name/user__name.scss';
+@import './user__wrap/user__wrap.scss';
+
+.user {
+    width: 100%;
+    color: $darkShade75; 
+    line-height: 24px;
+}

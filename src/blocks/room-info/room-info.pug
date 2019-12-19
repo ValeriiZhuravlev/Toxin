@@ -1,0 +1,8 @@
+mixin room-info(opt)
+    .room-info&attributes(attributes)
+        h2.room-info__header Сведения о номере
+        ul.room-info__list
+            each item in opt.info
+                li(class=`room-info__item room-info__item_${item.name}`)
+                    .room-info__label= item.label
+                    .room-info__text= item.text

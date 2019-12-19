@@ -1,0 +1,10 @@
+@import './room-info__header/room-info__header.scss';
+@import './room-info__list/room-info__list.scss';
+@import './room-info__item/room-info__item.scss';
+@import './room-info__label/room-info__label.scss';
+@import './room-info__text/room-info__text.scss';
+
+.room-info {
+    max-width: 280px;
+    display: inline-block;
+}

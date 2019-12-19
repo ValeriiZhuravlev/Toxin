@@ -1,0 +1,41 @@
+include ../room-info/room-info
+include ../pie-chart/pie-chart
+include ../reviews/reviews
+
+mixin details-info()
+    .details-info
+        +room-info({
+            info: [
+                {
+                    label: 'Комфорт',
+                    text: 'Шумопоглощающие стены',
+                    name: 'comfort' 
+                },{
+                    label: 'Удобство',
+                    text: 'Окно в каждой из спален',
+                    name: 'facilities' 
+                },{
+                    label: 'Уют',
+                    text: 'Номер оснащён камином',
+                    name: 'cosiness'
+                }
+            ]
+        })
+        +pie-chart()(class='details-info__pie-chart')
+        +reviews({
+            review: [
+                {
+                    userName: 'Мурад Сарафанов',
+                    userIcon: 'user1',
+                    userData: '5 дней назад',
+                    message: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                    like: [true, 12, 'user1'] 
+                },{
+                    userName: 'Патрисия Стёклышкова',
+                    userIcon: 'user2',
+                    userData: 'Неделю назад',
+                    message: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                    like: [false, 2, 'user2'] 
+                }
+            ]
+        })

@@ -3,7 +3,12 @@
 @import './pie-chart__markers/pie-chart__markers.scss';
 @import './pie-chart__marker/pie-chart__marker.scss';
 @import './pie-chart__wrap/pie-chart__wrap.scss';
-@import './pie-chart__title/pie-chart__title.scss';
+@import './pie-chart__header/pie-chart__header.scss';
 @import './pie-chart__vote/pie-chart__vote.scss';
 @import './pie-chart__number/pie-chart__number.scss';
 @import './pie-chart__text/pie-chart__text.scss';
+
+.pie-chart {
+    display: inline-block;
+    vertical-align: top;
+}

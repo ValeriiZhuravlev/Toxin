@@ -1,0 +1,28 @@
+include ../user/user
+include ../like/like
+
+mixin reviews(opt)
+    -opt = opt || {};
+    -review = opt.review || {};
+    -let revs;
+     if review.length == 0 || review.length > 4
+        -revs = `${review.length} отзывов`
+     else if review.length == 1
+        -revs = `${review.length} отзыв`
+     else if review.length < 4
+        -revs = `${review.length} отзыва`
+     
+    .reviews
+        h2.reviews__header Отзывы посетителей номера
+        span.reviews__nth= revs
+        ul.reviews__list
+            each item in review
+                li.reviews__item
+                    +user(item)(class='reviews__user')
+                    .reviews__review
+                        +like(item.like)(class='reviews__like')
+                        .reviews__comment= item.message
+
+
+
+

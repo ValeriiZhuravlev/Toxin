@@ -1,0 +1,13 @@
+@import '../user/user.scss';
+@import './reviews__list/reviews__list.scss';
+@import './reviews__nth/reviews__nth.scss';
+@import './reviews__header/reviews__header.scss';
+@import './reviews__like/reviews__like.scss';
+@import './reviews__comment/reviews__comment.scss';
+@import './reviews__review/reviews__review.scss';
+@import './reviews__item/reviews__item.scss';
+
+.reviews {
+    padding-top: 18px;
+    width: 100%;
+}

@@ -1,0 +1,7 @@
+mixin user(opt)
+    .user&attributes(attributes)
+        .user__icon
+            img(src=require(`../blocks/user/img/${opt.userIcon}.jpg`))
+        .user__wrap
+            .user__name= opt.userName
+            .user__date= opt.userData

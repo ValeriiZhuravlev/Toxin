@@ -1,0 +1,28 @@
+.room-info__item {
+    padding-left: 58px;
+    padding-top: 20px;
+    padding-bottom: 21px;
+    color: $darkShade75;
+    line-height: 1.7;
+    border-bottom: 1px solid $darkShade10;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 5px 24px;
+    box-sizing: border-box;
+
+    &_comfort {
+        background-image: url('./assets/img/insert_emoticon.svg');
+    }
+
+    &_facilities {
+        background-image: url('./assets/img/location_city.svg');
+    }
+
+    &_cosiness {
+        background-image: url('./assets/img/whatshot.svg');
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

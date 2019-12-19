@@ -6,7 +6,7 @@
     <title>Toxin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css">
-  <link href="/assets/css/app.46ffdd259ae95a1fdde9.css" rel="stylesheet"></head>
+  <link href="/assets/css/app.89304fccf67521aacd1e.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header header_landing">
       <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
@@ -32,7 +32,56 @@
       </ul>
     </header>
     <div class="landing">
-      <div class="card card-undefined landing__card-search">
+      <div class="card card-search landing__card-search">
+        <form class="card-search__form">
+          <h1 class="card__title">Найдём номера под ваши пожелания</h1>
+          <div class="field-wrapper calendar">
+            <div class="field field_dropdown card-search__input">
+              <label class="field__label">прибытие</label>
+              <input class="field__input calendar__input" placeholder="ДД.ММ.ГГГГ" date-direction="arrival" autocomplete="off" readonly>
+            </div>
+            <div class="field field_dropdown card-search__input">
+              <label class="field__label">выезд</label>
+              <input class="field__input calendar__input" placeholder="ДД.ММ.ГГГГ" date-direction="checkOut" autocomplete="off" readonly>
+            </div>
+          </div>
+          <div class="dropdown card-search__input">
+            <div class="field field_dropdown">
+              <label class="field__label" for="full">гости</label>
+              <input class="field__input dropdown__input" id="full" placeholder="Сколько гостей" autocomplete="off" readonly>
+            </div>
+            <div class="dropdown__total">
+              <ul class="dropdown__list">
+                <li class="dropdown__item"><span class="dropdown__text">Взрослые</span>
+                  <div class="controler dropdown__controler">
+                    <button class="controler__button controler__button_minus"><span>-</span></button>
+                    <input class="controler__number" value="0" readonly name="guests">
+                    <button class="controler__button controler__button_plus"> <span>+</span></button>
+                  </div>
+                </li>
+                <li class="dropdown__item"><span class="dropdown__text">Дети</span>
+                  <div class="controler dropdown__controler">
+                    <button class="controler__button controler__button_minus"><span>-</span></button>
+                    <input class="controler__number" value="0" readonly name="guests">
+                    <button class="controler__button controler__button_plus"> <span>+</span></button>
+                  </div>
+                </li>
+                <li class="dropdown__item"><span class="dropdown__text">Младенцы</span>
+                  <div class="controler dropdown__controler">
+                    <button class="controler__button controler__button_minus"><span>-</span></button>
+                    <input class="controler__number" value="0" readonly name="baby">
+                    <button class="controler__button controler__button_plus"> <span>+</span></button>
+                  </div>
+                </li>
+              </ul>
+              <div class="dropdown__buttons">
+                <button class="btn_type-inline-purple" date-role="apply">Применить</button>
+                <button class="btn_type-inline-grey" date-role="clear">Очистить</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn_type-fill btn_extend"><span class="btn__text">подобрать номер</span></button>
+        </form>
       </div>
       <p class="landing__message">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
     </div>

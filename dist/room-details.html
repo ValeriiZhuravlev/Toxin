@@ -6,7 +6,7 @@
     <title>Details</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css">
-  <link href="/assets/css/app.46ffdd259ae95a1fdde9.css" rel="stylesheet"></head>
+  <link href="/assets/css/app.89304fccf67521aacd1e.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header">
       <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
@@ -35,12 +35,151 @@
       <div class="photo__section photo__section_left"><img class="photo__img" src="/assets/img/image.jpg" alt="Фото номера 1"></div>
       <div class="photo__section photo__section_right"><img class="photo__img" src="/assets/img/image2.jpg" alt="Фото номера 2"><img class="photo__img" src="/assets/img/image3.jpg" alt="Фото номера 3"></div>
     </div>
-    <div class="card card-reservation">
-      <form class="card-reservation__form">
-        <div class="stats-room"><span class="stats__number"><span>№ </span>888</span><span class="room__luxury"> люкс</span><b class="stats__price">9 990₽<span> в сутки</span></b>
+    <main class="main main_details">
+      <div class="details-info">
+        <div class="room-info">
+          <h2 class="room-info__header">Сведения о номере</h2>
+          <ul class="room-info__list">
+            <li class="room-info__item room-info__item_comfort">
+              <div class="room-info__label">Комфорт</div>
+              <div class="room-info__text">Шумопоглощающие стены</div>
+            </li>
+            <li class="room-info__item room-info__item_facilities">
+              <div class="room-info__label">Удобство</div>
+              <div class="room-info__text">Окно в каждой из спален</div>
+            </li>
+            <li class="room-info__item room-info__item_cosiness">
+              <div class="room-info__label">Уют</div>
+              <div class="room-info__text">Номер оснащён камином</div>
+            </li>
+          </ul>
         </div>
-      </form>
-    </div>
+        <div class="pie-chart details-info__pie-chart">
+          <h2 class="pie-chart__header">Впечатления от номера</h2>
+          <div class="pie-chart__wrap">
+            <div class="pie-chart__diagram">
+              <div class="pie-chart__slice pie-chart__slice_perfectly"></div>
+              <div class="pie-chart__slice pie-chart__slice_good"></div>
+              <div class="pie-chart__slice pie-chart__slice_fair"></div>
+              <div class="pie-chart__slice pie-chart__slice_badly"></div>
+              <div class="pie-chart__vote"><b class="pie-chart__number">260</b><span class="pie-chart__text">голосов</span></div>
+            </div>
+            <ul class="pie-chart__markers">
+              <li class="pie-chart__marker pie-chart__marker_perfectly">Великолепно</li>
+              <li class="pie-chart__marker pie-chart__marker_good">Хорошо</li>
+              <li class="pie-chart__marker pie-chart__marker_fair">Удовлетворительно</li>
+              <li class="pie-chart__marker pie-chart__marker_badly">Разочарован</li>
+            </ul>
+          </div>
+        </div>
+        <div class="reviews">
+          <h2 class="reviews__header">Отзывы посетителей номера</h2><span class="reviews__nth">2 отзыва</span>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <div class="user reviews__user">
+                <div class="user__icon"><img src="/assets/img/user1.jpg"></div>
+                <div class="user__wrap">
+                  <div class="user__name">Мурад Сарафанов</div>
+                  <div class="user__date">5 дней назад</div>
+                </div>
+              </div>
+              <div class="like">
+                <input class="like__field" type="checkbox" id="user1" checked>
+                <label class="like__label" for="user1">12</label>
+              </div>
+              <div class="reviews__comment">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
+            </li>
+            <li class="reviews__item">
+              <div class="user reviews__user">
+                <div class="user__icon"><img src="/assets/img/user2.jpg"></div>
+                <div class="user__wrap">
+                  <div class="user__name">Патрисия Стёклышкова</div>
+                  <div class="user__date">Неделю назад</div>
+                </div>
+              </div>
+              <div class="like">
+                <input class="like__field" type="checkbox" id="user2">
+                <label class="like__label" for="user2">2</label>
+              </div>
+              <div class="reviews__comment">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main__wrap">
+        <div class="card card-reservation main__card-reservation">
+          <div class="stats-room card-reservation__stats-room"><span class="stats__number"><span>№ </span>888</span><span class="stats__luxury"> люкс</span><b class="stats__price">9 990₽<span> в сутки</span></b>
+          </div>
+          <form class="card-reservation__form">
+            <div class="field-wrapper calendar">
+              <div class="field field_dropdown card-reservation__input">
+                <label class="field__label">прибытие</label>
+                <input class="field__input calendar__input" placeholder="ДД.ММ.ГГГГ" date-direction="arrival" autocomplete="off" readonly>
+              </div>
+              <div class="field field_dropdown card-reservation__input">
+                <label class="field__label">выезд</label>
+                <input class="field__input calendar__input" placeholder="ДД.ММ.ГГГГ" date-direction="checkOut" autocomplete="off" readonly>
+              </div>
+            </div>
+            <div class="dropdown card-reservation__dropdown">
+              <div class="field field_dropdown">
+                <label class="field__label" for="full">гости</label>
+                <input class="field__input dropdown__input" id="full" placeholder="Сколько гостей" autocomplete="off" readonly>
+              </div>
+              <div class="dropdown__total">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item"><span class="dropdown__text">Взрослые</span>
+                    <div class="controler dropdown__controler">
+                      <button class="controler__button controler__button_minus"><span>-</span></button>
+                      <input class="controler__number" value="0" readonly name="guests">
+                      <button class="controler__button controler__button_plus"> <span>+</span></button>
+                    </div>
+                  </li>
+                  <li class="dropdown__item"><span class="dropdown__text">Дети</span>
+                    <div class="controler dropdown__controler">
+                      <button class="controler__button controler__button_minus"><span>-</span></button>
+                      <input class="controler__number" value="0" readonly name="guests">
+                      <button class="controler__button controler__button_plus"> <span>+</span></button>
+                    </div>
+                  </li>
+                  <li class="dropdown__item"><span class="dropdown__text">Младенцы</span>
+                    <div class="controler dropdown__controler">
+                      <button class="controler__button controler__button_minus"><span>-</span></button>
+                      <input class="controler__number" value="0" readonly name="baby">
+                      <button class="controler__button controler__button_plus"> <span>+</span></button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="dropdown__buttons">
+                  <button class="btn_type-inline-purple" date-role="apply">Применить</button>
+                  <button class="btn_type-inline-grey" date-role="clear">Очистить</button>
+                </div>
+              </div>
+            </div>
+            <ul class="calculator card-reservation__calculator">
+              <li class="calculator__item">
+                <div class="calculator__name ">9 990₽ х 4 суток</div>
+                <div class="calculator__value">39 960₽</div>
+              </li>
+              <li class="calculator__item">
+                <div class="calculator__name calculator__name_info">Сбор за услуги: скидка 2 179₽</div>
+                <div class="calculator__value">0₽</div>
+              </li>
+              <li class="calculator__item">
+                <div class="calculator__name calculator__name_info">Сбор за дополнительные услуги</div>
+                <div class="calculator__value">300₽</div>
+              </li>
+              <li class="calculator__item calculator__item_total">
+                <div class="calculator__name calculator__name_total">Итого</div>
+                <div class="calculator__dashed"></div>
+                <div class="calculator__value calculator__value_total">38 081₽</div>
+              </li>
+            </ul>
+            <button class="btn btn_type-fill btn_extend"><span class="btn__text">забронировать</span></button>
+          </form>
+        </div>
+      </div>
+    </main>
     <footer class="footer">
       <div class="footer__main">
         <div class="about footer__about">

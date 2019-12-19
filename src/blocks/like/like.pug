@@ -1,0 +1,7 @@
+mixin like(opt)
+    .like&attributes(attributes)
+        if opt[0]
+            input(type='checkbox', class='like__field' id=opt[2] checked)
+        else 
+            input(type='checkbox', class='like__field' id=opt[2])
+        label.like__label(for=opt[2])= opt[1]

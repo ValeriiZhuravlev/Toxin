@@ -1,0 +1,17 @@
+.regulations__item {
+    color: $darkShade75;
+    position: relative;
+    margin-bottom: 10px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: -20px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $darkShade25;
+    }
+}

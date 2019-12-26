@@ -1,0 +1,6 @@
+mixin regulations(opt)
+    .regulations&attributes(attributes)
+        h2.regulations__header= 'Правила'
+        ul.regulations__list
+            each item in opt
+                li.regulations__item= item 

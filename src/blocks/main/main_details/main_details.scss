@@ -4,3 +4,20 @@
     padding-left: 52px;
     padding-right: 50px;
 }
+
+@media screen and (max-width: $midDesktopWidth) {
+    .main_details {
+        flex-direction: column;
+    }
+
+    .main__card-reservation {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: $phoneWidth) {
+    .main__wrap {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}

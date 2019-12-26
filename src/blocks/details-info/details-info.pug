@@ -1,27 +1,30 @@
 include ../room-info/room-info
 include ../pie-chart/pie-chart
 include ../reviews/reviews
+include ../regulations/regulations
+include ../cancel/cancel
 
 mixin details-info()
     .details-info
-        +room-info({
-            info: [
-                {
-                    label: 'Комфорт',
-                    text: 'Шумопоглощающие стены',
-                    name: 'comfort' 
-                },{
-                    label: 'Удобство',
-                    text: 'Окно в каждой из спален',
-                    name: 'facilities' 
-                },{
-                    label: 'Уют',
-                    text: 'Номер оснащён камином',
-                    name: 'cosiness'
-                }
-            ]
-        })
-        +pie-chart()(class='details-info__pie-chart')
+        .details-info__about
+            +room-info({
+                info: [
+                    {
+                        label: 'Комфорт',
+                        text: 'Шумопоглощающие стены',
+                        name: 'comfort' 
+                    },{
+                        label: 'Удобство',
+                        text: 'Окно в каждой из спален',
+                        name: 'facilities' 
+                    },{
+                        label: 'Уют',
+                        text: 'Номер оснащён камином',
+                        name: 'cosiness'
+                    }
+                ]
+            })
+            +pie-chart()
         +reviews({
             review: [
                 {
@@ -39,3 +42,12 @@ mixin details-info()
                 }
             ]
         })
+        .details-info__conditions
+            +regulations([
+                'Нельзя с питомцами',
+                'Без вечеринок и мероприятий',
+                'Время прибытия — после 13:00, а выезд до 12:00'
+            ])
+            +cancel()(class='details-info__cancel')
+
+

@@ -4,38 +4,47 @@ const calendar = function() {
     let applyButton = $(
       '<span class="datepicker--button datepicker--button-apply">Применить</span>'
     );
+
     let datePicker = $('.calendar__input').focus(function(e) {
     let altField;
     let dateFormat;
     let event = e.target;
+    let flag = false;
+    let multipleDatesSeparator = ',';
       switch($(this).attr('date-direction')) {
         case 'arrival':
         case 'checkOut': 
             altField = $('[date-direction="arrival"]');
             dateFormat = 'dd.mm.yyyy';
+            
         break;
         case 'bothDirection':
             altField = $('[date-direction="bothDirection"]');
             dateFormat = 'dd M';
+            multipleDatesSeparator = '-';
+            flag = true;
       }
       function setFormat() {
-        let setFormat = $('[date-direction="bothDirection"]').val().toLowerCase();
-        $('[date-direction="bothDirection"]').val(setFormat);
+        if(flag) {
+          let setFormat = $('[date-direction="bothDirection"]').val().toLowerCase();
+          $('[date-direction="bothDirection"]').val(setFormat);
+        }
       }
+
       function splitArray(dateForm){
-        let dateVal = dateForm.split('-');
+        let dateVal = dateForm.split(',');
           $('[date-direction="arrival"]').val(dateVal[0]);
           $('[date-direction="checkOut"]').val(dateVal[1]);
       }
+
       if(event.classList.contains('calendar__input')) {
         $('.calendar').datepicker({
           range: true,
           inline:true,
-          multipleDatesSeparator: '-',
+          multipleDatesSeparator: multipleDatesSeparator,
           classes: 'droplist',
           moveToOtherMonthsOnSelect: false,
           moveToOtherYearsOnSelect: false,
-          toggleSelected: true,
           altField: altField,
           altFieldDateFormat: dateFormat,
           toggleSelected: true,
@@ -63,20 +72,17 @@ const calendar = function() {
           }
         });
         applyButton.appendTo('.datepicker--buttons');
-        $('[date-direction="arrival"]') .focus(() => {
+        $('[date-direction="arrival"]').focus(() => {
           splitArray(`${$('[date-direction="arrival"]').val()},${$('[date-direction="checkOut"]').val()}`);
         });
-        $('#checkOut').focus(() => {
+        $('[date-direction="checkOut"]').focus(() => {
           splitArray(`${$('[date-direction="arrival"]').val()},${$('[date-direction="checkOut"]').val()}`);
         });
-        setFormat();
-      }  
-      });     
+          setFormat();
+        }   
+      });   
     });
 }();
-
-
-
 module.exports = calendar;
 
 

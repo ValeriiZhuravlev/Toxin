@@ -1,0 +1,11 @@
+.details-info__conditions {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .details-info__conditions {
+       flex-direction: column;
+       align-items: stretch;
+    }
+}

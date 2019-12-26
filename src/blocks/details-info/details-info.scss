@@ -1,6 +1,14 @@
-@import './details-info__pie-chart/details-info__pie-chart.scss';
+@import './details-info__about/details-info__about.scss';
+@import './details-info__conditions/details-info__conditions.scss';
+@import './details-info__cancel/details-info__cancel.scss';
 
 .details-info {
     width: 65%;
     box-sizing: border-box;
+}
+
+@media screen and (max-width: $midDesktopWidth) {
+    .details-info {
+        width: 100%;
+    }
 }

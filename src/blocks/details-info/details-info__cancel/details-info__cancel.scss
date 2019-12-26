@@ -1,0 +1,9 @@
+.details-info__cancel {
+    margin-right: 25px;
+}
+
+@media screen and (max-width: $tableWidth) {
+    .details-info__cancel {
+        padding-left: 25px;
+    }
+}

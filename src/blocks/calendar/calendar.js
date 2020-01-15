@@ -11,30 +11,20 @@ const calendar = function() {
     let event = e.target;
     let flag = false;
     let multipleDatesSeparator = ',';
-      switch($(this).attr('date-direction')) {
-        case 'arrival':
-        case 'checkOut': 
-            altField = $('[date-direction="arrival"]');
-            dateFormat = 'dd.mm.yyyy';
-            
-        break;
-        case 'bothDirection':
-            altField = $('[date-direction="bothDirection"]');
-            dateFormat = 'dd M';
-            multipleDatesSeparator = '-';
-            flag = true;
-      }
+  
+    
+
       function setFormat() {
         if(flag) {
-          let setFormat = $('[date-direction="bothDirection"]').val().toLowerCase();
-          $('[date-direction="bothDirection"]').val(setFormat);
+          let setFormat = $('.bothDirection').val().toLowerCase();
+          $('.bothDirection').val(setFormat);
         }
       }
 
       function splitArray(dateForm){
         let dateVal = dateForm.split(',');
-          $('[date-direction="arrival"]').val(dateVal[0]);
-          $('[date-direction="checkOut"]').val(dateVal[1]);
+          $('.arrival').val(dateVal[0]);
+          $('.checkOut').val(dateVal[1]);
       }
 
       if(event.classList.contains('calendar__input')) {
@@ -57,6 +47,7 @@ const calendar = function() {
           onSelect: (formattedDate) => {
             splitArray(formattedDate);
             setFormat();
+            console.log(altField);
           }
         });
         $(document).mousedown((e) => {
@@ -71,14 +62,25 @@ const calendar = function() {
             calendarModal.show();
           }
         });
+
+        if($(this).has('bothDirection')) {
+          altField = $('.bothDirection');
+          dateFormat = 'dd M';
+          multipleDatesSeparator = '-';
+          flag = true;
+        } else if($(this).has('arrival') || $(this).has('checkOut')) {
+          altField = $('.arrival');
+          dateFormat = 'dd.mm.yyyy';
+        }
         applyButton.appendTo('.datepicker--buttons');
-        $('[date-direction="arrival"]').focus(() => {
-          splitArray(`${$('[date-direction="arrival"]').val()},${$('[date-direction="checkOut"]').val()}`);
+        $('.arrival').focus(() => {
+          splitArray(`${$('.arrival').val()},${$('.checkOut').val()}`);
         });
-        $('[date-direction="checkOut"]').focus(() => {
-          splitArray(`${$('[date-direction="arrival"]').val()},${$('[date-direction="checkOut"]').val()}`);
+        $('.checkOut').focus(() => {
+          splitArray(`${$('.arrival').val()},${$('.checkOut').val()}`);
         });
           setFormat();
+          
         }   
       });   
     });

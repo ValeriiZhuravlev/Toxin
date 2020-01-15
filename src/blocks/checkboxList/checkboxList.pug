@@ -5,6 +5,6 @@ mixin checkboxList(opt)
     -title = opt.title || {};
     .checkboxList&attributes(attributes)
         p.checkboxList__title= title
-            each item in opt.itemList
-                +input(item)(class='checkboxList__input')
+        each item in opt.itemList
+            +input(item)(class='checkboxList__input')
         

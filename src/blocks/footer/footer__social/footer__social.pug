@@ -10,5 +10,5 @@ mixin footer__social(nets)
         each item in nets
             li.footer__icon= item.name
                 +link(item.href)
-                    img(src=require(`../blocks/footer/footer__social/img/${item.name}.svg`) width="24" height="24" alt=nets.name)
+                    img(src=require(`../blocks/footer/footer__social/img/${item.name}.svg`) width="24" height="24" alt=item.name)
 

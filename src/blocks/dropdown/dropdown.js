@@ -40,7 +40,7 @@ const dropdown = function() {
         }
       });
 
-      $('[date-role="clear"]').click(function(e) {
+      $('.clear').click(function(e) {
         e.preventDefault();
         $(this).parents('.dropdown__total').prev('.field').children('.dropdown__input').val('');
         let control = $(this).parents('.dropdown__buttons').prev('.dropdown__list').find('.controler__number');

@@ -7,7 +7,6 @@ const like = function() {
         }else{
             $(event).next('.like__label').html(+(numb) - 1);
         }
-        
     });
 }();
 

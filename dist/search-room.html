@@ -6,14 +6,14 @@
     <title>Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css">
-  <link href="/assets/css/app.89304fccf67521aacd1e.css" rel="stylesheet"></head>
+  <link href="./assets/css/app.777bbf6b635fdb795fa7.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header">
-      <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
+      <div class="logo header__logo"><a class="logo__link" href="landing-page.html"><img src="./assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
       <ul class="site-menu header__site-menu">
-        <li class="site-menu__item"><a class="link site-menu__link" href="#">О нас</a>
+        <li class="site-menu__item"><a class="link site-menu__link" href="search-room.html">О нас</a>
         </li>
-        <li class="site-menu__item site-menu__item_extend"><a class="link site-menu__link" href="#">Услуги</a>
+        <li class="site-menu__item site-menu__item_extend"><a class="link site-menu__link" href="room-details.html">Услуги</a>
         </li>
         <li class="site-menu__item"><a class="link site-menu__link" href="#">Вакансии</a>
         </li>
@@ -36,7 +36,7 @@
         <div class="calendar filter__field">
           <div class="field field_dropdown filter__calendar">
             <label class="field__label" for="stayDate">даты пребывания в отеле</label>
-            <input class="field__input calendar__input" value="19 авг - 23 авг" id="stayDate" placeholder="ДД.ММ.ГГГГ" date-direction="bothDirection" autocomplete="off" readonly>
+            <input class="field__input calendar__input bothDirection" value="19 авг - 23 авг" id="stayDate" placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly>
           </div>
         </div>
         <div class="dropdown filter__dropdown">
@@ -69,8 +69,8 @@
               </li>
             </ul>
             <div class="dropdown__buttons">
-              <button class="btn_type-inline-purple" date-role="apply">Применить</button>
-              <button class="btn_type-inline-grey" date-role="clear">Очистить</button>
+              <button class="btn_type-inline-purple apply">Применить</button>
+              <button class="btn_type-inline-grey clear">Очистить</button>
             </div>
           </div>
         </div>
@@ -83,40 +83,37 @@
           <p class="range__text">Стоимость за сутки пребывания в номере</p>
         </div>
         <div class="checkboxList filter__conditions">
-          <p class="checkboxList__title">checkbox buttons
+          <div class="checkboxList__title">
+              <p class="checkboxList__title-text">checkbox buttons</p>
+            
             <div class="field field_checkbox checkboxList__input">
-              <input class="field__input" type="checkbox" id="smoke" autocomplete="off">
+              <input class="field__input" type="checkbox" id="smoke">
               <label class="field__label" for="smoke">Можно курить</label>
             </div>
             <div class="field field_checkbox checkboxList__input">
-              <input class="field__input" type="checkbox" id="pet" checked="true" autocomplete="off">
+              <input class="field__input" type="checkbox" id="pet" checked="true">
               <label class="field__label" for="pet">Можно с питомцами</label>
             </div>
             <div class="field field_checkbox checkboxList__input">
-              <input class="field__input" type="checkbox" id="invite" checked="true" autocomplete="off">
+              <input class="field__input" type="checkbox" id="invite" checked="true">
               <label class="field__label" for="invite">Можно пригласить гостей (до 10 человек)</label>
             </div>
-          </p>
+          </div>
         </div>
         <div class="checkboxList filter__accessibility">
-          <p class="checkboxList__title">Доступность
+          <div class="checkboxList__title">
+            <p class="checkboxList__title-text">Доступность</p>
             <div class="field field_checkbox checkboxList__input">
-              <input class="field__input" type="checkbox" id="width" autocomplete="off">
-              <label class="field__label" for="width">
-                <p class="field__title">Широкий коридор</p>
-                <p class="field__description">Ширина коридоров в номере 
-не менее 91 см.</p>
-              </label>
+              <input class="field__input" type="checkbox" id="width">
+              <label class="field__label" for="width"><span class="field__title">Широкий коридор</span><span class="field__description">Ширина коридоров в номере 
+не менее 91 см.</span></label>
             </div>
             <div class="field field_checkbox checkboxList__input">
-              <input class="field__input" type="checkbox" id="disabled" autocomplete="off">
-              <label class="field__label" for="disabled">
-                <p class="field__title">Помощник для инвалидов</p>
-                <p class="field__description">На 1 этаже вас встретит специалист
-и проводит до номера.</p>
-              </label>
+              <input class="field__input" type="checkbox" id="disabled">
+              <label class="field__label" for="disabled"><span class="field__title">Помощник для инвалидов</span><span class="field__description">На 1 этаже вас встретит специалист
+и проводит до номера.</span></label>
             </div>
-          </p>
+          </div>
         </div>
         <div class="dropdown filter__comfort">
           <div class="field field_dropdown">
@@ -148,8 +145,8 @@
               </li>
             </ul>
             <div class="dropdown__buttons">
-              <button class="btn_type-inline-purple" date-role="apply">Применить</button>
-              <button class="btn_type-inline-grey" date-role="clear">Очистить</button>
+              <button class="btn_type-inline-purple apply">Применить</button>
+              <button class="btn_type-inline-grey clear">Очистить</button>
             </div>
           </div>
         </div>
@@ -158,49 +155,49 @@
           <ul class="additional-list__list">
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="breakfast" autocomplete="off">
+                <input class="field__input" type="checkbox" id="breakfast">
                 <label class="field__label" for="breakfast">Завтрак</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="table" checked autocomplete="off">
+                <input class="field__input" type="checkbox" id="table" checked>
                 <label class="field__label" for="table">Письменный стол</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="chair" checked autocomplete="off">
+                <input class="field__input" type="checkbox" id="chair" checked>
                 <label class="field__label" for="chair">Стул для кормления</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="bed" checked autocomplete="off">
+                <input class="field__input" type="checkbox" id="bed" checked>
                 <label class="field__label" for="bed">Кроватка</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="tv" autocomplete="off">
+                <input class="field__input" type="checkbox" id="tv">
                 <label class="field__label" for="tv">Телевизор</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="shampoo" autocomplete="off">
+                <input class="field__input" type="checkbox" id="shampoo">
                 <label class="field__label" for="shampoo">Шампунь</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="tv2" autocomplete="off">
+                <input class="field__input" type="checkbox" id="tv2">
                 <label class="field__label" for="tv2">Телевизор</label>
               </div>
             </li>
             <li class="additional-list__item">
               <div class="field field_checkbox additional-list__input">
-                <input class="field__input" type="checkbox" id="shampoo2" autocomplete="off">
+                <input class="field__input" type="checkbox" id="shampoo2">
                 <label class="field__label" for="shampoo2">Шампунь</label>
               </div>
             </li>
@@ -211,11 +208,11 @@
         <h1 class="products__header">Номера, которые мы для вас подобрали</h1>
         <div class="products__list">
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/840.jpg" width="271" height="152" alt="840"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/840.jpg" width="271" height="152" alt="840"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -224,29 +221,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
-              <div class="stats-room"><span class="stats__number"><span>№ </span>888</span><span class="stats__luxury"> люкс</span><b class="stats__price">9 990₽<span> в сутки</span></b>
+              <div class="stats-room"><span class="stats__number"><span>№</span>888</span><span class="stats__luxury"> люкс</span><b class="stats__price">9 990₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">145<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/840.jpg" width="271" height="152" alt="840"></li>
-              <li class="room__img"><img src="/assets/img/740.jpg" width="271" height="152" alt="740"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/840.jpg" width="271" height="152" alt="840"></div>
+              <div class="room__img"><img src="./assets/img/740.jpg" width="271" height="152" alt="740"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -255,29 +252,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>840</span><b class="stats__price">9 900₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">65<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/740.jpg" width="271" height="152" alt="740"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/740.jpg" width="271" height="152" alt="740"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -286,29 +283,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>980</span><span class="stats__luxury"> люкс</span><b class="stats__price">8 500₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">35<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/740.jpg" width="271" height="152" alt="740"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/740.jpg" width="271" height="152" alt="740"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -317,29 +314,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>856</span><b class="stats__price">7 300₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">19<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/740.jpg" width="271" height="152" alt="740"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/740.jpg" width="271" height="152" alt="740"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -348,29 +345,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>740</span><b class="stats__price">6 000₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">44<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/982.jpg" width="271" height="152" alt="982"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/982.jpg" width="271" height="152" alt="982"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -379,29 +376,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>982</span><b class="stats__price">5 800₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">56<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/678.jpg" width="271" height="152" alt="678"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/678.jpg" width="271" height="152" alt="678"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -410,29 +407,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>678</span><b class="stats__price">5 500₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">45<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/450.jpg" width="271" height="152" alt="450"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/450.jpg" width="271" height="152" alt="450"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -441,29 +438,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>450</span><b class="stats__price">5 300₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">39<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/350.jpg" width="271" height="152" alt="350"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/350.jpg" width="271" height="152" alt="350"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -472,29 +469,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>350</span><b class="stats__price">5 000₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">77<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/666.jpg" width="271" height="152" alt="666"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/666.jpg" width="271" height="152" alt="666"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -503,29 +500,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>666</span><b class="stats__price">5 000₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">25<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/444.jpg" width="271" height="152" alt="444"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/444.jpg" width="271" height="152" alt="444"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -534,29 +531,29 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>444</span><b class="stats__price">5 000₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">15<span> Отзывов</span></span>
               </div>
             </div>
           </article>
           <article class="room products__item">
-            <ul class="room__gallery">
-              <li class="room__img"><img src="/assets/img/352.jpg" width="271" height="152" alt="352"></li>
-              <li class="room__img"><img src="/assets/img/980.jpg" width="271" height="152" alt="980"></li>
-              <li class="room__img"><img src="/assets/img/856.jpg" width="271" height="152" alt="856"></li>
-              <li class="room__img"><img src="/assets/img/888.jpg" width="271" height="152" alt="888"></li>
+            <div class="room__gallery">
+              <div class="room__img"><img src="./assets/img/352.jpg" width="271" height="152" alt="352"></div>
+              <div class="room__img"><img src="./assets/img/980.jpg" width="271" height="152" alt="980"></div>
+              <div class="room__img"><img src="./assets/img/856.jpg" width="271" height="152" alt="856"></div>
+              <div class="room__img"><img src="./assets/img/888.jpg" width="271" height="152" alt="888"></div>
               <div class="room__arrows room__arrows_prev"></div>
               <div class="room__arrows room__arrows_next"></div>
               <div class="swicher">
@@ -565,18 +562,18 @@
                 <button class="swicher__item" value="3"></button>
                 <button class="swicher__item" value="4"></button>
               </div>
-            </ul>
+            </div>
             <div class="room__info">
               <div class="stats-room"><span class="stats__number"><span>№ </span>352</span><b class="stats__price">5 000₽<span> в сутки</span></b>
               </div>
               <div class="room__stats">
                 <div class="raiting room__raiting">
                   <ul class="raiting__stars">
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
-                    <li class="raiting__star"><img src="/assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
+                    <li class="raiting__star"><img src="./assets/img/star_border.svg" width="20" height="19" alt="Star"></li>
                   </ul>
                 </div><span class="room__reviews">55<span> Отзывов</span></span>
               </div>
@@ -591,7 +588,7 @@
     <footer class="footer">
       <div class="footer__main">
         <div class="about footer__about">
-          <div class="logo"><a class="logo__link" href="landing-page.html"><img src="/assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
+          <div class="logo"><a class="logo__link" href="landing-page.html"><img src="./assets/img/Logo.svg" width="106" height="40" alt="Логотип"></a></div>
           <p class="about__text">
             Бронирование номеров в лучшем 
             отеле 2019 года по версии 
@@ -646,11 +643,11 @@
       <div class="footer__copyright">
         <p class="footer__text-copyright">Copyright © 2018 Toxin отель. Все права зачищены.</p>
         <ul class="footer__social">
-          <li class="footer__icon">twitter<a class="link" href="https://twitter.com/?lang=ru"><img src="/assets/img/twitter.svg" width="24" height="24"></a>
+          <li class="footer__icon">twitter<a class="link" href="https://twitter.com/?lang=ru"><img src="./assets/img/twitter.svg" width="24" height="24" alt="twitter"></a>
           </li>
-          <li class="footer__icon">facebook<a class="link" href="https://ru-ru.facebook.com/"><img src="/assets/img/facebook.svg" width="24" height="24"></a>
+          <li class="footer__icon">facebook<a class="link" href="https://ru-ru.facebook.com/"><img src="./assets/img/facebook.svg" width="24" height="24" alt="facebook"></a>
           </li>
-          <li class="footer__icon">instagram<a class="link" href="https://www.instagram.com/?hl=ru"><img src="/assets/img/instagram.svg" width="24" height="24"></a>
+          <li class="footer__icon">instagram<a class="link" href="https://www.instagram.com/?hl=ru"><img src="./assets/img/instagram.svg" width="24" height="24" alt="instagram"></a>
           </li>
         </ul>
       </div>
@@ -658,5 +655,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"> </script>
-  <script type="text/javascript" src="/assets/js/vendors.85b27a606112808ab85b.js"></script><script type="text/javascript" src="/assets/js/app.cc7e9a0291fcc1eafcab.js"></script></body>
+  <script src="./assets/js/vendors.6e8891c8442b6f8a7d01.js"></script><script  src="./assets/js/app.a56ff1a4193a4602bddf.js"></script></body>
 </html>

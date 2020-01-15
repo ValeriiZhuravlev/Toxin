@@ -18,6 +18,6 @@ mixin dropdown(opt)
             if(optButton)
                 .dropdown__buttons
                     each item, i in optButton
-                        button(class=`btn_type-${optButton[i].type}` date-role=optButton[i].role)= optButton[i].text
+                        button(class=`btn_type-${optButton[i].type}` class=optButton[i].role)= optButton[i].text
 
                             
